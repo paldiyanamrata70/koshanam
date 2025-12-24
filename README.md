@@ -30,13 +30,4 @@ Showcasing artisanal textiles, fashion collections, and craftsmanship. Built wit
 🧩 ShadCN UI
 🚀 React Router
 
-## Getting Started 🚀
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start development server: `npm run dev`
-4. Build for production: `npm run build`
-
-## Deployment 📦
-
-The project is configured for automatic deployment to GitHub Pages via GitHub Actions.
