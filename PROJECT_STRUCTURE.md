@@ -1,40 +1,279 @@
 # Kosha Project Structure and File Details
 
-This document provides a comprehensive overview of all files in the Kosha React application, including their purposes, locations, and roles in the project.
+This document provides a comprehensive overview of all files in the Kosha React application, including their purposes, locations, roles in the project, and detailed explanations of their contents and usage.
+
+## Project Overview
+
+Kosha is a modern React-based e-commerce website for an artisanal textile brand, built with TypeScript, Vite, and Tailwind CSS. The application features responsive design, interactive components, and showcases fabric collections, products, and brand story.
+
+### Technology Stack
+
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom configuration
+- **UI Components**: ShadCN UI (Radix UI primitives)
+- **State Management**: TanStack Query for server state
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Forms**: React Hook Form with Zod validation
+- **Notifications**: Sonner for toasts
+- **Deployment**: Netlify (static hosting)
+
+### Key Dependencies Explained
+
+From `package.json`:
+
+- **@radix-ui/***: Low-level UI primitives for accessible components
+- **@tanstack/react-query**: Data fetching and caching library
+- **react-hook-form**: Performant forms with easy validation
+- **zod**: TypeScript-first schema validation
+- **tailwind-merge**: Utility for merging Tailwind classes
+- **embla-carousel-react**: Carousel component for product showcases
+- **react-router-dom**: Client-side routing
+- **lucide-react**: Beautiful icon library
+- **next-themes**: Theme switching (dark/light mode support)
 
 ## Root Directory Files
 
 ### Configuration Files
 
-- **.gitignore**: Specifies files and directories that Git should ignore (e.g., node_modules, dist, .env files). Prevents unnecessary files from being committed to version control.
+#### **.gitignore**
+```
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
 
-- **bun.lockb**: Lock file for Bun package manager, ensuring consistent dependency versions across environments.
+# Production build
+dist/
+build/
 
-- **components.json**: Configuration file for ShadCN UI components, defining component settings and paths.
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-- **eslint.config.js**: Configuration for ESLint, defining JavaScript/TypeScript linting rules for code quality.
+# IDE
+.vscode/
+.idea/
 
-- **package-lock.json**: Lock file for npm, ensuring exact dependency versions for reproducible builds.
+# OS
+.DS_Store
+Thumbs.db
+```
+Specifies files and directories that Git should ignore. Prevents unnecessary files from being committed to version control, keeping the repository clean and focused on source code.
 
-- **package.json**: Defines project metadata, dependencies, scripts, and configuration. Includes scripts like "dev", "build", "lint".
+#### **bun.lockb**
+Binary lock file for Bun package manager. Ensures consistent dependency versions across different environments and developers. Bun is a fast JavaScript runtime and package manager that can replace npm.
 
-- **postcss.config.js**: Configuration for PostCSS, used for CSS processing and Tailwind CSS.
+#### **components.json**
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  }
+}
+```
+Configuration file for ShadCN UI components. Defines component settings, paths, styling preferences, and aliases used by the CLI tool.
 
-- **tailwind.config.ts**: Configuration for Tailwind CSS, defining custom themes, colors, and responsive breakpoints.
+#### **eslint.config.js**
+```javascript
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
 
-- **tsconfig.app.json**: TypeScript configuration for the application code.
+export default tseslint.config(
+  { ignores: ['dist'] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+    },
+  },
+)
+```
+Configuration for ESLint. Defines JavaScript/TypeScript linting rules for code quality, including React-specific rules and hot reload optimization.
 
-- **tsconfig.json**: Main TypeScript configuration file.
+#### **package-lock.json**
+Generated by npm. Contains exact dependency tree with resolved versions, ensuring reproducible builds across different environments.
 
-- **tsconfig.node.json**: TypeScript configuration for Node.js-related files.
+#### **package.json**
+```json
+{
+  "name": "vite_react_shadcn_ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    // ... all dependencies listed
+  },
+  "devDependencies": {
+    // ... dev dependencies
+  }
+}
+```
+Defines project metadata, dependencies, scripts, and configuration. Scripts include development server, build, linting, and preview commands.
 
-- **vite.config.ts**: Configuration for Vite build tool, including plugins, aliases, and server settings.
+#### **postcss.config.js**
+```javascript
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+```
+Configuration for PostCSS. Processes CSS with Tailwind CSS and Autoprefixer for cross-browser compatibility.
+
+#### **tailwind.config.ts**
+```typescript
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  darkMode: ['class'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  prefix: '',
+  theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      // custom extensions
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+}
+
+export default config
+```
+Configuration for Tailwind CSS. Defines content paths for purging, custom themes, colors, responsive breakpoints, and plugins.
+
+#### **tsconfig.app.json**
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+```
+TypeScript configuration for the application code. Defines compiler options, JSX settings, and path aliases.
+
+#### **tsconfig.json**
+Main TypeScript configuration that extends others. Includes references to app and node configs.
+
+#### **tsconfig.node.json**
+TypeScript configuration for Node.js-related files (build tools, configs).
+
+#### **vite.config.ts**
+```typescript
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+import { componentTagger } from "lovable-tagger";
+
+export default defineConfig(({ mode }) => ({
+  base: '/',
+  server: {
+    host: "::",
+    port: 8080,
+  },
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+}));
+```
+Configuration for Vite build tool. Includes React plugin, server settings, aliases, and development tools.
 
 ### Main Files
 
-- **index.html**: The main HTML template. Entry point for the application, contains the root div and meta tags.
+#### **index.html**
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/placeholder.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kosha - Artisan Textiles</title>
+    <meta name="description" content="Discover exquisite artisanal textiles and fashion from Kosha" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+```
+The main HTML template. Entry point for the application, contains the root div where React mounts, meta tags for SEO, and script tag loading the main TypeScript file.
 
-- **README.md**: Project documentation, including setup instructions, features, and deployment info.
+#### **README.md**
+Project documentation file with setup instructions, features, technologies used, and deployment information. Follows a structured format for professional projects.
 
 ## Public Directory
 
@@ -96,39 +335,84 @@ Contains the application source code.
 
 ### Components Directory (`src/components/`)
 
-Reusable React components:
+Reusable React components that make up the website sections:
 
-- **ArtisanalExcellence.tsx**: Component showcasing artisanal craftsmanship.
+#### **App.tsx** - Main Application Component
+```tsx
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-- **DividerBand.tsx**: Visual divider component.
+const queryClient = new QueryClient();
 
-- **FabricArtistry.tsx**: Component displaying fabric collections.
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
-- **FacesOfKosha.tsx**: Component featuring team or brand faces.
+export default App;
+```
+Sets up global providers, routing, and notification systems.
 
-- **FeaturedCollection.tsx**: Highlights featured products.
+#### **Header.tsx** - Navigation Header
+```tsx
+// Key features:
+// - Responsive navigation
+// - Mobile sidebar toggle
+// - Brand logo and menu items
+// - Smooth scroll to sections
+```
 
-- **Footer.tsx**: Site footer with links and information.
+#### **HeroSection.tsx** - Main Banner
+```tsx
+// Features:
+// - Hero image/video background
+// - Call-to-action buttons
+// - Brand messaging
+// - Responsive layout
+```
 
-- **Header.tsx**: Site header with navigation.
+#### **FeaturedCollection.tsx** - Product Showcase
+```tsx
+// Components:
+// - Product grid/carousel
+// - Image galleries
+// - Product descriptions
+// - Add to cart/contact buttons
+```
 
-- **HeroSection.tsx**: Main hero/banner section.
+#### **Footer.tsx** - Site Footer
+```tsx
+// Contains:
+// - Contact information
+// - Social media links
+// - Navigation links
+// - Copyright notice
+```
 
-- **JourneySection.tsx**: Component about the brand journey.
+#### **WhatsAppButton.tsx** - Floating Contact
+```tsx
+// Features:
+// - Fixed position floating button
+// - Direct WhatsApp link
+// - Mobile-optimized
+```
 
-- **MapSection.tsx**: Interactive map component.
-
-- **NavLink.tsx**: Navigation link component.
-
-- **ReviewsSection.tsx**: Customer reviews display.
-
-- **Sidebar.tsx**: Mobile navigation sidebar.
-
-- **StorySection.tsx**: Brand story component.
-
-- **WatchFinest.tsx**: Component for showcasing finest products.
-
-- **WhatsAppButton.tsx**: Floating WhatsApp contact button.
+Other components follow similar patterns with responsive design and accessibility features.
 
 ### UI Components (`src/components/ui/`)
 
@@ -254,25 +538,90 @@ Page components for routing:
 
 - **NotFound.tsx**: 404 error page component.
 
-## Build Output (dist/)
+## Build Process and Output
 
-When `npm run build` is run, Vite generates the `dist/` directory with optimized production files:
+### Build Commands
 
-- **index.html**: Optimized HTML with asset links.
+- `npm run dev`: Starts development server with hot reload
+- `npm run build`: Creates production build in `dist/` directory
+- `npm run build:dev`: Creates development build
+- `npm run lint`: Runs ESLint for code quality checks
+- `npm run preview`: Serves the built application locally
 
-- **assets/**: Contains compiled CSS, JS bundles, and optimized images.
+### Build Output (dist/)
 
-- **_redirects**: Copied from public for Netlify routing.
+When `npm run build` is executed, Vite generates the `dist/` directory with optimized production files:
 
-The dist folder is what gets deployed to hosting platforms like Netlify or GitHub Pages.
+#### **index.html**
+Optimized HTML template with:
+- Minified and hashed asset links
+- Meta tags for SEO
+- Root div for React mounting
+
+#### **assets/** Directory
+Contains compiled and optimized assets:
+- **CSS bundles**: Minified Tailwind CSS with used classes only
+- **JavaScript bundles**: Code-split chunks with hashed filenames for caching
+- **Optimized images**: Compressed images with modern formats
+- **Source maps**: For debugging in production (if enabled)
+
+#### **_redirects**
+Copied from `public/_redirects` for Netlify SPA routing support.
+
+### Deployment Process
+
+1. **Local Build**: `npm run build` creates optimized files
+2. **Git Push**: Changes pushed to GitHub repository
+3. **CI/CD Trigger**: Netlify detects changes and rebuilds
+4. **Asset Optimization**: Images compressed, code minified
+5. **CDN Distribution**: Files served via Netlify's global CDN
+
+The dist folder contains everything needed for production deployment, with no dependencies on Node.js runtime.
+
+## Development Workflow
+
+### Local Development
+1. `npm install` - Install dependencies
+2. `npm run dev` - Start development server
+3. Make changes with hot reload
+4. `npm run lint` - Check code quality
+5. `npm run build` - Test production build
+6. `npm run preview` - Preview production build locally
+
+### Version Control
+- Git for source control
+- GitHub for remote repository
+- Branching strategy for features/bugs
+
+### Deployment
+- Automatic deployment via Netlify
+- GitHub integration for CI/CD
+- Environment-specific builds
+
+## Performance Optimizations
+
+- **Code Splitting**: Vite automatically splits code into chunks
+- **Tree Shaking**: Removes unused code from bundles
+- **Image Optimization**: Automatic compression and modern formats
+- **CSS Purging**: Tailwind removes unused styles
+- **Caching**: Hashed filenames for long-term caching
 
 ## File Purposes Summary
 
-- **Source files (.tsx, .ts, .js)**: Define application logic, components, and configuration.
-- **Asset files (.jpg, .png, .svg, .mp4)**: Provide visual content and media.
-- **Configuration files**: Set up build tools, linting, styling, and dependencies.
-- **Lock files**: Ensure consistent dependency installation.
-- **Documentation**: Guide development and usage.
-- **Build output**: Optimized files for production deployment.
+- **Source files (.tsx, .ts, .js)**: Define application logic, components, and configuration
+- **Asset files (.jpg, .png, .svg, .mp4)**: Provide visual content and media
+- **Configuration files**: Set up build tools, linting, styling, and dependencies
+- **Lock files**: Ensure consistent dependency installation across environments
+- **Documentation**: Guide development, setup, and usage
+- **Build output**: Optimized static files for production deployment
 
-This structure follows modern React/Vite best practices, separating concerns and enabling scalable development.
+## Architecture Benefits
+
+- **Modular Components**: Reusable, maintainable UI components
+- **Type Safety**: TypeScript prevents runtime errors
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Accessibility**: ShadCN UI components follow accessibility standards
+- **Performance**: Optimized builds with modern tooling
+- **Scalability**: Clean architecture supports future growth
+
+This structure follows modern React/Vite best practices, separating concerns, enabling scalable development, and ensuring maintainable code.

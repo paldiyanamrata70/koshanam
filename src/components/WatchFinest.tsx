@@ -39,7 +39,11 @@ const WatchFinest = () => {
                   playsInline
                   onClick={(e) => {
                     const video = e.currentTarget;
-                    video.paused ? video.play() : video.pause();
+                    if (video.paused) {
+                      video.play();
+                    } else {
+                      video.pause();
+                    }
                   }}
                 />
               )}

@@ -31,7 +31,7 @@ const Header = ({ onToggleSidebar }: HeaderProps) => {
     >
       <div className="max-w-[1400px] mx-auto py-[25px] px-10 flex justify-between items-center">
         <div className="header-logo">
-          <h1 className={`font-bold transition-colors duration-300 ${isHovered ? 'text-primary' : 'text-white'}`}>
+          <h1 className={`font-bold ${isHovered ? 'text-primary' : 'text-white'}`}>
             K·O·S·H·A
           </h1>
           <span className={`transition-colors duration-300 ${isHovered ? 'text-secondary' : 'text-white'}`}>
