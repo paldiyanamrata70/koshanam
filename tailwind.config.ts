@@ -17,6 +17,7 @@ export default {
       fontFamily: {
         cinzel: ['"Cinzel Decorative"', 'serif'],
         libre: ['"Libre Baskerville"', 'serif'],
+        doppelganger: ["Doppelganger", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -37,6 +37,7 @@ const FeaturedCollection = () => {
                 src={item.image}
                 alt={item.title}
                 className="collection-img"
+                loading="lazy"
               />
               <p className="image-text">{item.title}</p>
             </div>

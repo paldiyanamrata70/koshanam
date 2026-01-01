@@ -15,7 +15,7 @@ const ReviewsSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [testimonials.length]);

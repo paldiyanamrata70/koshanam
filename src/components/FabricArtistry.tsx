@@ -38,7 +38,12 @@ const FabricArtistry = () => {
         <div className="fabric-row" ref={scrollRef}>
           {fabrics.map((fabric, index) => (
             <div key={index} className="fabric-card">
-              <img src={fabric} alt={`Fabric ${index + 1}`} />
+              <img
+                src={fabric}
+                alt={`Fabric ${index + 1}`}
+                loading="lazy"
+                style={{ transform: index === 11 ? 'rotate(180deg)' : 'none' }}
+              />
               <p>Kanjivaram</p>
             </div>
           ))}

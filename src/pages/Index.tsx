@@ -1,21 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import HeroSection from '@/components/HeroSection';
-import StorySection from '@/components/StorySection';
-import DividerBand from '@/components/DividerBand';
-import FeaturedCollection from '@/components/FeaturedCollection';
-import FabricArtistry from '@/components/FabricArtistry';
-import JourneySection from '@/components/JourneySection';
-import ReviewsSection from '@/components/ReviewsSection';
-import WatchFinest from '@/components/WatchFinest';
-import ArtisanalExcellence from '@/components/ArtisanalExcellence';
-import FacesOfKosha from '@/components/FacesOfKosha';
-import MapSection from '@/components/MapSection';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
 
-const Index = () => {
+// Lazy load components below the fold
+const StorySection = lazy(() => import('@/components/StorySection'));
+const DividerBand = lazy(() => import('@/components/DividerBand'));
+const FeaturedCollection = lazy(() => import('@/components/FeaturedCollection'));
+const FabricArtistry = lazy(() => import('@/components/FabricArtistry'));
+const JourneySection = lazy(() => import('@/components/JourneySection'));
+const ReviewsSection = lazy(() => import('@/components/ReviewsSection'));
+const WatchFinest = lazy(() => import('@/components/WatchFinest'));
+const ArtisanalExcellence = lazy(() => import('@/components/ArtisanalExcellence'));
+const FacesOfKosha = lazy(() => import('@/components/FacesOfKosha'));
+const MapSection = lazy(() => import('@/components/MapSection'));
+const Footer = lazy(() => import('@/components/Footer'));
+const WhatsAppButton = lazy(() => import('@/components/WhatsAppButton'));
+
+interface IndexProps {
+  showPreloader: boolean;
+}
+
+const Index = ({ showPreloader }: IndexProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
@@ -32,25 +38,29 @@ const Index = () => {
 
   return (
     <>
-      <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      {!showPreloader && <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <main>
         <HeroSection />
-        <StorySection />
-        <DividerBand />
-        <FeaturedCollection />
-        <FabricArtistry />
-        <JourneySection />
-        <ReviewsSection />
-        <WatchFinest />
-        <ArtisanalExcellence />
-        <FacesOfKosha />
-        <MapSection />
+        <Suspense fallback={<div>Loading...</div>}>
+          <StorySection />
+          <DividerBand />
+          <FeaturedCollection />
+          <FabricArtistry />
+          <JourneySection />
+          <ReviewsSection />
+          <WatchFinest />
+          <ArtisanalExcellence />
+          <FacesOfKosha />
+          <MapSection />
+        </Suspense>
       </main>
 
-      <Footer />
-      <WhatsAppButton />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
+      </Suspense>
+      {!showPreloader && <WhatsAppButton isSidebarOpen={sidebarOpen} />}
     </>
   );
 };

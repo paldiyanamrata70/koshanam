@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
+@font-face {
+  font-family: "Doppelganger";
+  src: url("/src/assets/fonts/Doppelganger-Regular.otf") format("opentype"),
+       url("/src/assets/fonts/Doppelganger-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -135,7 +143,7 @@
   }
   
   .nav-links a:hover {
-    @apply text-foreground/60 translate-x-[5px];
+    @apply text-foreground/40 translate-x-[5px];
   }
   
   .nav-links a:hover::after {
@@ -193,10 +201,10 @@
   
   /* Reveal Animation */
   .reveal {
-    @apply translate-y-[50px] opacity-0 ease-out;
+    @apply translate-y-[20px] opacity-0 ease-out;
     transition: all 1.8s ease-out;
   }
-  
+
   .reveal.active {
     @apply translate-y-0 opacity-100;
   }
@@ -223,16 +231,10 @@
     .extended-grid {
       @apply grid-cols-2;
     }
-    .artisan-grid {
-      @apply grid-cols-2;
-    }
   }
 
   @media (max-width: 600px) {
     .extended-grid {
-      @apply grid-cols-1;
-    }
-    .artisan-grid {
       @apply grid-cols-1;
     }
   }
@@ -404,55 +406,316 @@
   .finest-scroll-btn.right {
     @apply right-[15px];
   }
+
+  /* Video Modal */
+  .video-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15vh;
+    z-index: 1000;
+  }
+
+  .video-modal {
+    position: relative;
+    max-width: 25vw;
+    max-height: 25vh;
+  }
+
+  .video-modal video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .video-close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
   
   @media (max-width: 768px) {
     .finest-scroll-btn {
       @apply block;
     }
-    
+
+.close-btn {
+  position: absolute;
+  top: -8px;     /* adjust vertically */
+  right: -8px;   /* adjust horizontally */
+
+  width: 28px;
+  height: 28px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
     .watch-images-row {
       @apply justify-start;
+    }
+
+  .whatsapp-popup {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 160px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+/* This is the positioning reference */
+.popup-content {
+  position: relative;
+  padding: 14px 10px 10px;
+  text-align: center;
+}
+
+/* Body spacing */
+.popup-body {
+  padding-top: 6px;
+}
+
+/* CLOSE BUTTON — THIS WILL WORK */
+.close-btn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+
+  width: 26px;
+  height: 26px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+
+/* Title */
+.popup-content h3 {
+  font-size: 12px;
+  margin: 0;
+}
+
+
+    .whatsapp-float {
+      bottom: 35px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .whatsapp-float svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .popup-title {
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+
+    .whatsapp-btn {
+      padding: 10px;
+    }
+
+    .whatsapp-btn svg {
+      width: 40px;
+      height: 40px;
     }
   }
   
   /* Artisanal Excellence */
-  .artisan {
-    @apply py-[60px] px-5 text-center;
+  .artisanal-section {
+    padding: 80px 20px;
+    background: #fff;
+    overflow: hidden;
+    text-align: center;
   }
-  
-  .artisan h2 {
-    @apply font-cinzel text-[42px] font-normal text-foreground mb-10;
+
+  .artisanal-section h2 {
+    @apply font-cinzel text-[42px] font-normal text-foreground;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 60px;
   }
-  
-  .artisan-grid {
-    @apply flex flex-wrap justify-center gap-2 md:gap-5;
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Height to accommodate cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .artisan-item {
-    @apply text-center;
+
+  .card-container {
+    position: absolute;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition with custom easing */
   }
-  
-  .artisan-item img {
-    @apply w-44 h-[250px] object-cover rounded-2xl;
+
+  /* Center card: fully visible, scale 1, highest z-index, full opacity */
+  .card-container.center {
+    transform: translateX(0) scale(1);
+    z-index: 10;
+    opacity: 1;
+    filter: blur(0);
   }
-  
-  .artisan-item p {
-    @apply mt-2.5 text-sm lowercase;
+
+  /* Left card: smaller, faded, blurred */
+  .card-container.left {
+    transform: translateX(-250px) scale(0.85);
+    z-index: 5;
+    opacity: 0.5;
+    filter: blur(1px);
   }
+
+  /* Right card: smaller, faded, blurred */
+  .card-container.right {
+    transform: translateX(250px) scale(0.85);
+    z-index: 5;
+    opacity: 0.5;
+    filter: blur(1px);
+  }
+
+  /* Hidden card: off-screen, more faded */
+  .card-container.hidden {
+    transform: translateX(500px) scale(0.7);
+    z-index: 1;
+    opacity: 0;
+    filter: blur(2px);
+  }
+
+  .card {
+    width: 320px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    color: #333;
+  }
+
+  .card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 20px;
+    background: white;
+  }
+
+  .card-content h3 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .artisanal-section {
+      padding: 60px 10px;
+    }
+
+    .artisanal-section h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .carousel-wrapper {
+      height: 400px;
+    }
+
+    .card-container.left {
+      transform: translateX(-150px) scale(0.8);
+    }
+
+    .card-container.right {
+      transform: translateX(150px) scale(0.8);
+    }
+
+    .card-container.hidden {
+      transform: translateX(300px) scale(0.6);
+    }
+
+    .card {
+      width: 250px;
+    }
+
+    .card img {
+      height: 250px;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      font-size: 16px;
+    }
+
+    .stats {
+      font-size: 12px;
+    }
+  }
+
   
   /* Faces of Kosha */
   .faces {
-    @apply bg-blush-dark py-[60px] px-5 text-center;
+    background-image: linear-gradient(rgba(122, 50, 50, 0.5), rgba(122, 50, 50, 0.5)), url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply py-[60px] px-5 text-center;
   }
   
   .faces h2 {
-    @apply font-cinzel text-[42px] font-normal text-foreground mb-[25px];
+    @apply font-cinzel text-[42px] font-normal text-white mb-[25px];
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   }
-  
+
   .faces p {
-    @apply max-w-[800px] mx-auto text-[17px] leading-[1.7];
+    @apply max-w-[800px] mx-auto text-[17px] leading-[1.7] text-white;
   }
   
   /* Map Section */
@@ -517,14 +780,84 @@
     @apply text-[34px] text-white cursor-pointer;
   }
   
-  /* WhatsApp Float Button */
-  .whatsapp-float {
-    @apply fixed bottom-5 right-5 w-[60px] h-[60px] bg-[#25d366] rounded-full flex items-center justify-center no-underline transition-transform duration-300 z-[1000];
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  /* WhatsApp Popup */
+  .whatsapp-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 120px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 9999;
+    padding: 8px;
   }
-  
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #25d366;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    z-index: 9999;
+  }
+
   .whatsapp-float:hover {
-    @apply scale-110;
+    transform: scale(1.05);
+  }
+
+  .whatsapp-float svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .popup-content {
+    text-align: center;
+  }
+
+  .popup-title {
+    font-size: 3px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .whatsapp-btn {
+    display: inline-block;
+    background: #25d366;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .whatsapp-btn svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 28px;
+    background: #fff;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
   
   /* Overlay */
@@ -551,14 +884,62 @@
     @apply absolute top-[30px] right-[30px] w-[35px] h-[35px] rounded-full bg-foreground text-background border-none cursor-pointer text-base flex items-center justify-center;
   }
   
+  /* Logo Splash */
+  .logo-splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: logoFadeOut 3s ease-in-out forwards;
+  }
+
+  .logo-image {
+    max-width: 300px;
+    height: auto;
+    animation: logoMoveUp 3s ease-in-out forwards;
+  }
+
+  @keyframes logoMoveUp {
+    0% { transform: translateY(0); opacity: 1; }
+    70% { transform: translateY(-50px); opacity: 1; }
+    100% { transform: translateY(-100px); opacity: 0; }
+  }
+
+  @keyframes logoFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; pointer-events: none; }
+  }
+
   /* Fade Animation */
   .fade {
     animation: fadeIn 1s ease-in-out;
   }
-  
+
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+
+  /* Preloader Animation */
+  @keyframes logoAnimation {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  .logo-animation {
+    animation: logoAnimation 3s ease-in-out forwards;
   }
 }
 
@@ -598,17 +979,6 @@
     @apply gap-[30px] pl-[20px];
   }
   
-  .artisan h2 {
-    @apply text-4xl mb-[50px];
-  }
-  
-  .artisan-item {
-    @apply w-40;
-  }
-  
-  .artisan-item img {
-    @apply h-[190px];
-  }
   
   .footer {
     @apply py-10 px-5;
@@ -662,17 +1032,6 @@
     @apply w-full h-[250px];
   }
   
-  .artisan-grid {
-    @apply grid grid-cols-2 gap-4 justify-center;
-  }
-  
-  .artisan-item {
-    @apply w-full;
-  }
-  
-  .artisan-item img {
-    @apply w-full h-[250px];
-  }
   
   .sidebar {
     @apply w-full -right-full;
@@ -691,4 +1050,18 @@
 
 @media (max-width: 576px) {
   body { font-size: 12px; }
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 320px;
+  }
+
+  .card img {
+    height: 320px;
+  }
 }

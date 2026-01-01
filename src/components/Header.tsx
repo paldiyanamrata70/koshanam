@@ -24,12 +24,12 @@ const Header = ({ onToggleSidebar }: HeaderProps) => {
     <header
       className={`fixed top-0 w-full z-[1000] transition-all duration-400 ${
         isHidden ? '-translate-y-full' : 'translate-y-0'
-      } ${isHovered ? 'bg-background shadow-[0_2px_15px_rgba(0,0,0,0.1)]' : 'bg-transparent'}`}
+      } ${isHovered ? 'bg-white shadow-[0_2px_15px_rgba(0,0,0,0.1)]' : 'bg-white/20'}`}
       style={{ transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-[1400px] mx-auto py-[25px] px-10 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto py-[20px] px-10 flex justify-between items-center">
         <div className="header-logo">
           <h1 className={`font-bold ${isHovered ? 'text-primary' : 'text-white'}`}>
             K·O·S·H·A

@@ -1,7 +1,10 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const WatchFinest = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const componentRef = useRef<HTMLDivElement>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState('');
 
   const items = [
     { type: 'image', src: '/pictures/home.jpg' },
@@ -19,8 +22,34 @@ const WatchFinest = () => {
     }
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const videos = entry.target.querySelectorAll('video');
+            videos.forEach((video) => {
+              video.play().catch(() => {}); // Ignore play promise rejection
+            });
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% visible
+    );
+
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div id="finest-film" className="watch-finest">
+    <div id="finest-film" className="watch-finest" ref={componentRef}>
       <h2 className="watch-title">Watch Finest</h2>
       <div className="scroll-wrapper">
         <button className="finest-scroll-btn left" onClick={() => scroll(-1)}>
@@ -30,21 +59,20 @@ const WatchFinest = () => {
           {items.map((item, index) => (
             <div key={index} className="image-box">
               {item.type === 'image' ? (
-                <img src={item.src} alt={`Finest ${index + 1}`} />
+                <img src={item.src} alt={`Finest ${index + 1}`} loading="lazy" />
               ) : (
                 <video
                   src={item.src}
                   muted
                   loop
                   playsInline
-                  onClick={(e) => {
-                    const video = e.currentTarget;
-                    if (video.paused) {
-                      video.play();
-                    } else {
-                      video.pause();
-                    }
+                  autoPlay
+                  preload="none"
+                  onClick={() => {
+                    setSelectedVideo(item.src);
+                    setModalOpen(true);
                   }}
+                  style={{ cursor: 'pointer' }}
                 />
               )}
               <p>Kanjivaram</p>
@@ -55,6 +83,14 @@ const WatchFinest = () => {
           ›
         </button>
       </div>
+      {modalOpen && (
+        <div className="video-modal-overlay" onClick={() => setModalOpen(false)}>
+          <div className="video-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="video-close-btn" onClick={() => setModalOpen(false)}>×</button>
+            <video src={selectedVideo} controls autoPlay />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
