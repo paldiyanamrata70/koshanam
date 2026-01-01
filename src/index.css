@@ -301,7 +301,8 @@
   }
   
   .fabric-scroll-btn {
-    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 text-white border-none w-[45px] h-[45px] rounded-full text-[22px] cursor-pointer z-10;
+    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 border-none w-[45px] h-[45px] rounded-full text-[22px] cursor-pointer z-10;
+    color: rgb(252, 238, 232);
   }
   
   .fabric-scroll-btn.left {
@@ -396,7 +397,8 @@
   }
   
   .finest-scroll-btn {
-    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 text-white border-none w-[45px] h-[45px] rounded-full text-[22px] cursor-pointer z-10 hidden;
+    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 border-none w-[45px] h-[45px] rounded-full text-[22px] cursor-pointer z-10 hidden;
+    color: rgb(252, 238, 232);
   }
   
   .finest-scroll-btn.left {
