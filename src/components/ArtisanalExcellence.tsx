@@ -56,10 +56,6 @@ const ArtisanalExcellence = () => {
                 <img src={item.image} alt={item.title} />
                 <div className="card-content">
                   <h3>{item.title}</h3>
-                  <div className="stats">
-                    <span>{item.stat1}</span>
-                    <span>{item.stat2}</span>
-                  </div>
                 </div>
               </div>
             </div>

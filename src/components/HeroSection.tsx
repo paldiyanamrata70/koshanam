@@ -29,7 +29,8 @@ const HeroSection = () => {
               backgroundImage: index === 0
                 ? `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('${slide}')`
                 : `url('${slide}')`,
-              backgroundPosition: index === 0 ? 'center center' : index === 1 ? '900% 65%' : index === 3 ? 'center 90%' : 'center center',
+              backgroundPosition: index === 0 ? 'center center' : index === 1 ? '100% 65%' : index === 3 ? '40% 80%' : 'center center',
+              backgroundSize: index === 1 ? '110%' : index === 3 ? '120%' : 'cover',
             }}
           />
         ))}

@@ -1,8 +1,4 @@
-import { useRef } from 'react';
-
 const FabricArtistry = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   const fabrics = [
     '/pictures/fabric1.JPG',
     '/pictures/fabric2.JPG',
@@ -18,39 +14,22 @@ const FabricArtistry = () => {
     '/pictures/fabric12.JPG',
   ];
 
-  const scroll = (direction: number) => {
-    if (scrollRef.current) {
-      const card = scrollRef.current.querySelector('.fabric-card');
-      if (card) {
-        const scrollAmount = card.clientWidth + 80; // width + gap
-        scrollRef.current.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <div id="fabric" className="fabric-artistry">
       <h2 className="fabric-title">Explore Fabric Artistry</h2>
-      <div className="fabric-scroll-wrapper">
-        <button className="fabric-scroll-btn left" onClick={() => scroll(-1)}>
-          ‹
-        </button>
-        <div className="fabric-row" ref={scrollRef}>
-          {fabrics.map((fabric, index) => (
-            <div key={index} className="fabric-card">
-              <img
-                src={fabric}
-                alt={`Fabric ${index + 1}`}
-                loading="lazy"
-                style={{ transform: index === 11 ? 'rotate(180deg)' : 'none' }}
-              />
-              <p>Kanjivaram</p>
-            </div>
-          ))}
+      <div className="scroll-wrapper">
+        <div className="fabric-row">
+        {fabrics.map((fabric, index) => (
+          <div key={index} className="fabric-card">
+            <img
+              src={fabric}
+              alt={`Fabric ${index + 1}`}
+              loading="lazy"
+              style={{ transform: index === 11 ? 'rotate(180deg)' : 'none' }}
+            />
+          </div>
+        ))}
         </div>
-        <button className="fabric-scroll-btn right" onClick={() => scroll(1)}>
-          ›
-        </button>
       </div>
     </div>
   );

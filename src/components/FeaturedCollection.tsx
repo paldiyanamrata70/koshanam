@@ -1,4 +1,9 @@
+import { useEffect, useState, useRef } from 'react';
+
 const FeaturedCollection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   const collections = [
     {
       image: '/pictures/dress material .PNG',
@@ -26,8 +31,27 @@ const FeaturedCollection = () => {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="collection" className="extended-collection">
+    <section id="collection" className="extended-collection" ref={sectionRef}>
       <h2 className="decorative-title mb-5 -mt-[45px]">Featured Collection</h2>
       <div className="extended-grid">
         {collections.map((item, index) => (
@@ -36,7 +60,7 @@ const FeaturedCollection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="collection-img"
+                className={`collection-img ${isVisible ? 'zoom-in' : ''}`}
                 loading="lazy"
               />
               <p className="image-text">{item.title}</p>

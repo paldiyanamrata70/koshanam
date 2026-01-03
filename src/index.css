@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap');
 
 @font-face {
-  font-family: "Doppelganger";
-  src: url("/src/assets/fonts/Doppelganger-Regular.otf") format("opentype"),
-       url("/src/assets/fonts/Doppelganger-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'Doppelganger';
+  src: url('/fonts/Doppelganger-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -202,7 +201,7 @@
   /* Reveal Animation */
   .reveal {
     @apply translate-y-[20px] opacity-0 ease-out;
-    transition: all 1.8s ease-out;
+    transition: all 0.9s ease-out;
   }
 
   .reveal.active {
@@ -224,18 +223,19 @@
   }
   
   .extended-grid {
-    @apply mt-5 max-w-[1000px] mx-auto grid grid-cols-3 gap-7 justify-items-center;
+    @apply mt-5 max-w-[1000px] mx-auto grid grid-cols-3 justify-items-center;
+    gap: 50px;
   }
   
   @media (max-width: 900px) {
     .extended-grid {
-      @apply grid-cols-2;
+      @apply grid-cols-3;
     }
   }
 
   @media (max-width: 600px) {
     .extended-grid {
-      @apply grid-cols-1;
+      @apply grid-cols-3;
     }
   }
   
@@ -249,11 +249,7 @@
   
   .collection-img {
     @apply w-full h-full object-cover transition-transform duration-500;
-  }
-  
-  .image-placeholder:hover .collection-img {
-    @apply scale-105;
-    filter: brightness(1.2) contrast(1.2);
+    filter: brightness(1.1);
   }
   
   .image-placeholder::before {
@@ -269,48 +265,59 @@
   .fabric-artistry {
     @apply bg-blush py-20 pb-[100px] text-center flex flex-col items-center;
   }
-  
+
   .fabric-title {
     @apply font-cinzel text-[42px] font-normal text-foreground mb-[30px];
   }
-  
-  .fabric-scroll-wrapper {
-    @apply relative w-full;
+
+  .scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
   }
-  
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
   .fabric-row {
-    @apply flex gap-20 py-5 px-[50px] pl-20 overflow-x-auto scroll-smooth justify-start;
+    @apply flex overflow-x-auto gap-[80px] scroll-smooth py-3 pl-[80px] pr-[80px];
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .fabric-row::-webkit-scrollbar {
     display: none;
   }
-  
+
   .fabric-card {
-    @apply flex-none w-[350px] h-[550px] relative overflow-hidden;
+    @apply flex-none w-[330px] h-[450px] rounded-[20px] overflow-hidden bg-white shadow-lg;
   }
-  
+
   .fabric-card img {
     @apply w-full h-full object-cover;
   }
-  
-  .fabric-card p {
-    @apply absolute bottom-5 left-1/2 -translate-x-1/2 text-white text-[22px] tracking-[1px];
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+  .fabric-carousel-wrapper {
+    @apply relative w-full max-w-[1200px] mx-auto;
   }
-  
+
+  .fabric-carousel {
+    @apply relative w-full h-[500px] flex items-center justify-center overflow-hidden;
+  }
+
+  .fabric-carousel.no-transition .fabric-card {
+    transition: none !important;
+  }
+
   .fabric-scroll-btn {
-    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 border-none w-[45px] h-[45px] rounded-full text-[22px] cursor-pointer z-10;
-    color: rgb(252, 238, 232);
+    @apply absolute top-1/2 -translate-y-1/2 bg-black/50 border-none w-[50px] h-[50px] rounded-full text-white text-2xl cursor-pointer z-10 hover:bg-black/70 transition-colors;
   }
-  
+
   .fabric-scroll-btn.left {
-    @apply left-[15px];
+    @apply left-4;
   }
-  
+
   .fabric-scroll-btn.right {
-    @apply right-[15px];
+    @apply right-4;
   }
   
   /* Journey */
@@ -432,6 +439,20 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .video-modal {
+      max-width: 60vw;
+      max-height: 40vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .video-modal {
+      max-width: 80vw;
+      max-height: 60vh;
+    }
   }
 
   .video-close-btn {
@@ -710,14 +731,56 @@
     background-repeat: no-repeat;
     @apply py-[60px] px-5 text-center;
   }
-  
+
   .faces h2 {
     @apply font-cinzel text-[42px] font-normal text-white mb-[25px];
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   }
 
-  .faces p {
-    @apply max-w-[800px] mx-auto text-[17px] leading-[1.7] text-white;
+  .faces-text {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.8;
+
+    letter-spacing: 0.04em;
+
+    /* CRITICAL FIXES */
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  @media (max-width: 768px) {
+    .faces-text {
+      max-width: 90%;
+      font-size: 15px;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+
+      /* MOST IMPORTANT */
+      display: block;
+      text-align: center;
+    }
+
+    .faces-text br {
+      display: none;
+    }
+  }
+
+  .faces-of-kosha {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .faces-title {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: #fff;
   }
   
   /* Map Section */
@@ -783,83 +846,52 @@
   }
   
   /* WhatsApp Popup */
-  .whatsapp-popup {
+  .whatsapp-wrapper {
     position: fixed;
-    bottom: 80px;
-    right: 30px;
-    width: 120px;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    z-index: 9999;
-    padding: 8px;
-  }
-
-  .whatsapp-float {
-    position: fixed;
-    bottom: 40px;
-    right: 30px;
-    background: #25d366;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    bottom: 20px;
+    right: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-    z-index: 9999;
+    gap: 10px;
+    z-index: 1000;
   }
 
-  .whatsapp-float:hover {
-    transform: scale(1.05);
-  }
-
-  .whatsapp-float svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .popup-content {
-    text-align: center;
-  }
-
-  .popup-title {
-    font-size: 3px;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-
-  .whatsapp-btn {
+  .whatsapp-box {
+    position: relative;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
     display: inline-block;
-    background: #25d366;
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
   }
 
-  .whatsapp-btn:hover {
-    transform: scale(1.05);
-  }
-
-  .whatsapp-btn svg {
-    width: 60px;
-    height: 60px;
+  .whatsapp-text {
+    white-space: nowrap;
   }
 
   .close-btn {
     position: absolute;
-    top: 8px;
-    right: 28px;
-    background: #fff;
-    border: none;
-    font-size: 10px;
-    cursor: pointer;
+    top: -15px;
+    right: -40px;
+    width: 24px;
+    height: 24px;
+    background: #111;
+    color: white;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .whatsapp-btn img {
+    width: 50px;
+    height: 50px;
   }
   
   /* Overlay */
@@ -888,24 +920,24 @@
   
   /* Logo Splash */
   .logo-splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    animation: logoFadeOut 3s ease-in-out forwards;
-  }
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 200px;
+   background: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 9999;
+   animation: logoFadeOut 1.5s ease-in-out forwards;
+ }
 
-  .logo-image {
-    max-width: 300px;
-    height: auto;
-    animation: logoMoveUp 3s ease-in-out forwards;
-  }
+ .logo-image {
+   max-width: 300px;
+   height: auto;
+   animation: logoMoveUp 1.5s ease-in-out forwards;
+ }
 
   @keyframes logoMoveUp {
     0% { transform: translateY(0); opacity: 1; }
@@ -941,7 +973,7 @@
   }
 
   .logo-animation {
-    animation: logoAnimation 3s ease-in-out forwards;
+    animation: logoAnimation 1.5s ease-in-out forwards;
   }
 }
 
@@ -956,23 +988,24 @@
 
 @media (max-width: 768px) {
   body { font-size: 13px; }
-  
+
   .header-logo h1 {
     @apply text-[28px];
   }
-  
+
   .story-section {
     @apply py-[60px];
   }
-  
+
+
   .decorative-title {
     @apply text-4xl;
   }
-  
+
   .journey-video-box {
     @apply h-[600px] w-[90%];
   }
-  
+
   .image-box {
     @apply w-[280px] h-[400px];
   }
@@ -980,12 +1013,12 @@
   .images-row {
     @apply gap-[30px] pl-[20px];
   }
-  
-  
+
+
   .footer {
     @apply py-10 px-5;
   }
-  
+
   .footer-container {
     @apply flex-col text-center gap-[30px];
   }
@@ -993,60 +1026,78 @@
   .footer-col {
     @apply w-full;
   }
-  
+
   .social-icons {
     @apply justify-center;
   }
-  
+
   .map-section iframe {
     @apply block mx-auto w-full h-[300px];
   }
-  
+
   .reviews-section {
     @apply py-10;
   }
-  
+
   .testimonial {
     @apply flex-col items-center gap-2;
   }
-  
+
   .avatar {
     @apply w-[50px] h-[50px];
   }
-  
+
   .comment {
     @apply text-lg text-center whitespace-normal;
   }
-  
+
   .hero-center {
     @apply bottom-[15%];
   }
-  
+
   .extended-grid {
     @apply grid grid-cols-2 gap-2.5 justify-center;
   }
-  
+
   .extended-item {
     @apply w-full;
   }
-  
+
   .image-placeholder {
     @apply w-full h-[250px];
   }
-  
-  
+
+
   .sidebar {
     @apply w-full -right-full;
   }
-  
+
   .sidebar.active {
     @apply right-0;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .image-placeholder {
-    @apply h-[350px];
+  .fabric-row {
+    display: flex;
+    gap: 48px;
+    padding-left: 48px;
+    padding-right: 48px;
+    align-items: flex-start;
+  }
+
+  .fabric-card {
+    flex: 0 0 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .fabric-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
 }
 

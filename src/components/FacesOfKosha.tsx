@@ -25,15 +25,15 @@ const FacesOfKosha = () => {
 
   return (
     <section id="faces-of-kosha" className="faces" ref={sectionRef}>
-      <h2>Faces of kosha</h2>
-      <p className={isVisible ? 'reveal active' : 'reveal'}>
-        Kosha was founded by Krishna and Shoumik Mahadik, visionary creators committed to preserving
-        the essence of handcrafted fashion. In collaboration with local artisans, they bring to life
-        authentic, handmade sarees and dresses that seamlessly blend traditional craftsmanship with
-        contemporary, minimalist design. Each Kosha piece is meticulously crafted with a focus on
-        care, sustainability, and cultural heritage. Together, they strive to produce clothing that
-        is meaningful, timeless, and deeply rooted in India's rich artistic traditions.
-      </p>
+      <h2 className="faces-title">faces of kosha</h2>
+      <div className={`faces-text ${isVisible ? 'reveal active' : 'reveal'}`}>
+        Kosha is led by Krishna Mahadik, driven by a belief in<br />
+        slow, intentional fashion. The brand brings together skilled<br />
+        artisans and contemporary design to create handcrafted<br />
+        sarees and dresses with clarity and purpose. Each piece is<br />
+        made with respect for craft, attention to detail, and a<br />
+        quiet sense of timelessness rooted in India's tradition.
+      </div>
     </section>
   );
 };
