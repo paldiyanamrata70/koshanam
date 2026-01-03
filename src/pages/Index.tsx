@@ -17,11 +17,7 @@ const MapSection = lazy(() => import('@/components/MapSection'));
 const Footer = lazy(() => import('@/components/Footer'));
 const WhatsAppButton = lazy(() => import('@/components/WhatsAppButton'));
 
-interface IndexProps {
-  showPreloader: boolean;
-}
-
-const Index = ({ showPreloader }: IndexProps) => {
+const Index = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
@@ -38,7 +34,7 @@ const Index = ({ showPreloader }: IndexProps) => {
 
   return (
     <>
-      {!showPreloader && <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />}
+      <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <main>
@@ -60,7 +56,7 @@ const Index = ({ showPreloader }: IndexProps) => {
       <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
-      {!showPreloader && <WhatsAppButton isSidebarOpen={sidebarOpen} />}
+      <WhatsAppButton isSidebarOpen={sidebarOpen} />
     </>
   );
 };

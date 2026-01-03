@@ -973,7 +973,7 @@
   }
 
   .logo-animation {
-    animation: logoAnimation 1.5s ease-in-out forwards;
+    /* animation removed */
   }
 }
 
