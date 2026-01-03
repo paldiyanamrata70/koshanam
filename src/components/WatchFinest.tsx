@@ -67,7 +67,7 @@ const WatchFinest = () => {
                   loop
                   playsInline
                   autoPlay
-                  preload="none"
+                  preload="metadata"
                   onClick={() => {
                     setSelectedVideo(item.src);
                     setModalOpen(true);
