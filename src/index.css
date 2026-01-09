@@ -438,7 +438,8 @@
   
   /* Fabric Artistry */
   .fabric-artistry {
-    @apply bg-blush pt-0 pb-[clamp(10rem,20vw,16.25rem)] mt-[5px] text-center flex flex-col items-center;
+    @apply bg-blush pt-0 pb-[clamp(10rem,20vw,16.25rem)] mt-[-80px] text-center flex flex-col items-center;
+    transform: translateY(-10px);
   }
 
   .fabric-title {
@@ -476,7 +477,7 @@
     scroll-snap-type: x mandatory;
     width: max-content;
     transition: transform 0.5s ease;
-    transform: translateY(-60px);
+    transform: translateY(-100px);
   }
 
   .fabric-row::-webkit-scrollbar {
@@ -487,13 +488,11 @@
     @apply flex-none rounded-[20px] overflow-hidden bg-white shadow-lg;
     width: clamp(250px, 30vw, 400px);
     height: clamp(300px, 35vw, 500px);
-    transform: translateY(20px);
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease;
   }
 
   .fabric-card.show {
-    transform: translateY(0);
     opacity: 1;
   }
 
