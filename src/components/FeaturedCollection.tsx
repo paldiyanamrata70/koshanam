@@ -75,7 +75,7 @@ const FeaturedCollection = () => {
       <style dangerouslySetInnerHTML={{ __html: `
         .fabric-title {
           text-align: center;
-          font-size: 2.5rem;
+          font-size: clamp(1.5rem, 4vw, 2.625rem);
           margin-bottom: 60px;
           margin-top: 100px;
           opacity: 0;
@@ -85,11 +85,6 @@ const FeaturedCollection = () => {
         .fabric-title.animate {
           opacity: 1;
           transform: translateY(0);
-        }
-        @media (max-width: 768px) {
-          .fabric-title {
-            font-size: 2rem;
-          }
         }
       `}} />
       <h2 className="decorative-title mb-[38px] mt-0">Featured Collection</h2>
