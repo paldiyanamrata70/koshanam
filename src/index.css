@@ -476,6 +476,7 @@
     scroll-snap-type: x mandatory;
     width: max-content;
     transition: transform 0.5s ease;
+    transform: translateY(-40px);
   }
 
   .fabric-row::-webkit-scrollbar {
