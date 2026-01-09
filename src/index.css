@@ -1001,6 +1001,14 @@
     letter-spacing: 0.04em;
     color: #fff;
   }
+
+  @media (max-width: 1024px) {
+    .faces-text {
+      text-align: left;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
   
   /* Map Section */
   .map-section {
