@@ -836,11 +836,11 @@
     }
 
     .card {
-      width: clamp(200px, 20vw, 400px);
+      width: clamp(200px, 20vw, 350px);
     }
 
     .card img {
-      height: clamp(200px, 20vw, 400px);
+      height: clamp(200px, 20vw, 350px);
     }
   }
 
@@ -1357,10 +1357,10 @@
   }
 
   .card {
-    width: 400px;
+    width: 350px;
   }
 
   .card img {
-    height: 400px;
+    height: 350px;
   }
 }
