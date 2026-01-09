@@ -822,6 +822,12 @@
     text-align: center;
   }
 
+  @media (max-width: 768px) {
+    .artisanal-section {
+      margin-bottom: 50px;
+    }
+  }
+
   @media (min-width: 769px) and (max-width: 1024px) {
     .card-container.left {
       transform: translateX(-15vw) scale(0.8);
