@@ -90,8 +90,8 @@ const FabricArtistry = () => {
     <div
       id="fabric"
       ref={sectionRef}
+      className="fabric-section"
       style={{
-        marginTop: '-550px',
         paddingTop: '80px',
         overflowX: 'visible',
         overflowY: 'hidden',

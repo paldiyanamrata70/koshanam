@@ -437,9 +437,14 @@
   }
   
   /* Fabric Artistry */
-  .fabric-artistry {
-    @apply bg-blush pt-0 pb-[clamp(10rem,20vw,16.25rem)] mt-[-80px] text-center flex flex-col items-center;
-    transform: translateY(-10px);
+  .fabric-section {
+    margin-top: -550px;
+  }
+
+  @media (max-width: 768px) {
+    .fabric-section {
+      margin-top: -600px;
+    }
   }
 
   .fabric-title {
