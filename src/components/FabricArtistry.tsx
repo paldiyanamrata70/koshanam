@@ -91,7 +91,7 @@ const FabricArtistry = () => {
       id="fabric"
       ref={sectionRef}
       style={{
-        marginTop: '-610px',
+        marginTop: '-550px',
         paddingTop: '80px',
         overflowX: 'visible',
         overflowY: 'hidden',
@@ -108,7 +108,6 @@ const FabricArtistry = () => {
           transition: transform 0.4s ease, opacity 0.6s ease;
           opacity: 0;
           transform: translateY(50px);
-          padding-top: 50px;
         }
         .fabric-container.show {
           opacity: 1;
