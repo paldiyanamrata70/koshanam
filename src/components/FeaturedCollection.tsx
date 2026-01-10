@@ -71,7 +71,7 @@ const FeaturedCollection = () => {
 
 
   return (
-    <section id="collection" className="extended-collection" ref={sectionRef} style={{ transform: `translateY(${parallaxY}px)`, marginBottom: '130px', transition: 'transform 0.1s ease-out' }}>
+    <section id="collection" className="extended-collection" ref={sectionRef} style={{ transform: `translateY(${parallaxY}px)`, marginBottom: '130px', transition: 'transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}>
       <style dangerouslySetInnerHTML={{ __html: `
         .fabric-title {
           text-align: center;
