@@ -114,8 +114,8 @@ const FabricArtistry = () => {
           transform: translateY(0);
         }
         .curved-img {
-          width: 350px;
-          height: 450px;
+          width: clamp(250px, 30vw, 350px);
+          height: clamp(350px, 40vw, 450px);
           object-fit: cover;
           border-radius: 40px;
         }
@@ -220,8 +220,8 @@ const FabricArtistry = () => {
           display: 'flex',
           flexDirection: 'row',
           overflowX: 'auto',
-          gap: '50px',
-          padding: '40px 50px 20px',
+          gap: 'clamp(20px, 5vw, 50px)',
+          padding: 'clamp(20px, 5vw, 40px) clamp(20px, 10vw, 50px) clamp(10px, 2vw, 20px)',
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
         }}
@@ -238,6 +238,7 @@ const FabricArtistry = () => {
               src={fabric}
               alt={`Fabric ${index + 1}`}
               className="curved-img fabric-sway"
+              style={{ transform: 'translateY(-5px)' }}
             />
             <button className="simple-btn">kanjivaram</button>
           </div>
