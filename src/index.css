@@ -519,7 +519,7 @@
   /* Mobile: center first image */
   @media (max-width: 640px) {
     .fabric-row {
-      padding-left: calc(50vw - 75px);
+      padding-left: calc(50vw - 80px);
     }
   }
 
