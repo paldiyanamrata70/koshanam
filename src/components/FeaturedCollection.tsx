@@ -71,7 +71,7 @@ const FeaturedCollection = () => {
 
 
   return (
-    <section id="collection" className="extended-collection" ref={sectionRef} style={{ transform: `translateY(${parallaxY}px)`, marginBottom: '130px' }}>
+    <section id="collection" className="extended-collection" ref={sectionRef} style={{ transform: `translateY(${parallaxY}px)`, marginBottom: '130px', transition: 'transform 0.1s ease-out' }}>
       <style dangerouslySetInnerHTML={{ __html: `
         .fabric-title {
           text-align: center;
@@ -81,6 +81,11 @@ const FeaturedCollection = () => {
           opacity: 0;
           transform: scale(0);
           transition: transform 1s ease, opacity 1s ease;
+        }
+        @media (max-width: 768px) {
+          .fabric-title {
+            font-size: 1.5rem;
+          }
         }
         .fabric-title.animate {
           opacity: 1;

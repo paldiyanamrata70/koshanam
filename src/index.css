@@ -474,7 +474,7 @@
   @media (max-width: 768px) {
     .fabric-section {
       margin-top: -650px !important;
-      height: 500px !important;
+      height: 600px !important;
     }
   }
 
@@ -519,7 +519,7 @@
   /* Mobile: center first image */
   @media (max-width: 640px) {
     .fabric-row {
-      padding-left: calc(50vw - 56px);
+      padding-left: calc(50vw - 70px);
     }
   }
 
@@ -928,7 +928,7 @@
 
   @media (max-width: 768px) {
     .carousel-wrapper {
-      transform: translateY(-50px);
+      transform: translateY(-20px);
     }
   }
 
@@ -1296,7 +1296,11 @@
 
 
   .decorative-title {
-    @apply text-4xl;
+    font-size: 1.5rem;
+  }
+
+  .faces-text {
+    font-size: 1rem;
   }
 
   .journey-video-box {
@@ -1426,5 +1430,9 @@
   .fabric-card {
     width: 200px;
     height: 200px;
+  }
+
+  .fabric-title {
+    font-size: 1.5rem;
   }
 }
