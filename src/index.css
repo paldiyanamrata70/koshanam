@@ -473,8 +473,8 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -580px !important;
-      height: 400px !important;
+      margin-top: -600px !important;
+      height: 500px !important;
     }
   }
 
