@@ -68,6 +68,8 @@ const WatchFinest = () => {
                   playsInline
                   autoPlay
                   preload="metadata"
+                  onLoad={() => console.log(`Video loaded: ${item.src}`)}
+                  onError={(e) => console.error(`Video failed to load: ${item.src}`, e)}
                   onClick={() => {
                     setSelectedVideo(item.src);
                     setModalOpen(true);

@@ -11,25 +11,26 @@ const FabricArtistry = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const fabrics = [
-    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG', '/pictures/fabric12.JPG',
-    '/pictures/fabric4.JPG', '/pictures/fabric5.JPG', '/pictures/fabric6.jpg',
-    '/pictures/fabric7.JPG', '/pictures/fabric11.JPG', '/pictures/fabric9.JPG',
-    '/pictures/fabric10.JPG', '/pictures/fabric8.JPG', '/pictures/fabric3.JPG',
+    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG', '/pictures/fabric9.JPG',
+     '/pictures/fabric5.JPG','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
+    '/pictures/fabric7.JPG', '/pictures/fabric3.JPG','/pictures/fabric11.JPG', 
+    '/pictures/fabric10.JPG', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
   ];
 
   const buttonTexts = [
     'Chiffon',
     'Maheshwari Chanderi',
-    'Banarasi',
-    'Tissue Katan Banarasi',
-    'Banarasi',
-    'Kora',
-    'Katan Banarasi',
-    'Banarasi',
     'Maheshwari',
     'Banarasi',
-    'Kota Silk',
-    'Kanjivaram ',
+    'Kota silk',
+    'Kora',
+    'Katan Banarasi',
+        'Kanjivaram ',
+     'Banarasi',
+    'Banarasi',
+    'Tissue Katan Banarasi',
+
+    'Banarasi',
   ];
 
   const animations = ['fabric-sway', 'fabric-3d', 'fabric-bounce'];
@@ -130,8 +131,8 @@ const FabricArtistry = () => {
           transform: translateY(0);
         }
         .curved-img {
-          width: clamp(250px, 30vw, 350px);
-          height: clamp(320px, 36vw, 450px);
+          width: 350px;
+          height: 450px;
           object-fit: cover;
           border-radius: 40px;
         }

@@ -471,8 +471,8 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -580px;
-      height: 500px;
+      margin-top: -580px !important;
+      height: 300px !important;
     }
   }
 
@@ -578,7 +578,7 @@
   
   /* Journey */
   .journey-title {
-    @apply text-center font-cinzel font-normal text-foreground mb-[50px] z-10;
+    @apply text-center font-cinzel font-normal text-foreground mb-[80px] z-10;
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     margin-top: clamp(-3rem, -13vw, -16.75rem);
     padding-top: 50px;
