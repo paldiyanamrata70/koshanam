@@ -213,6 +213,7 @@
   @media (max-width: 768px) {
     .hero-section {
       height: 100vh;
+      margin-bottom: -20px;
     }
 
     .hero-btn {
@@ -1296,7 +1297,11 @@
 
   .story-section {
     padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .decorative-title {
+    margin-top: -30px !important;
   }
 
 
