@@ -8,7 +8,7 @@ const WatchFinest = () => {
 
   const items = [
     { type: 'video', src: '/pictures/video1.mp4' },
-    { type: 'video', src: '/pictures/video2.MP4' },
+    { type: 'video', src: '/pictures/video2.mp4' },
     { type: 'video', src: '/pictures/video3.mp4' },
   ];
 
