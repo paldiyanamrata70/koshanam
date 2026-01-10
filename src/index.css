@@ -192,6 +192,7 @@
 
   .hero-btn {
     @apply py-3.5 px-9 border border-white/80 rounded-[25px] text-white no-underline text-sm uppercase tracking-[2px] backdrop-blur-sm transition-all duration-300;
+    font-family: 'DM Sans', sans-serif;
   }
 
   .hero-btn:hover {
