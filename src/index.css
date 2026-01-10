@@ -149,7 +149,7 @@
 
   @media (max-width: 768px) {
     .header-logo h1 {
-      font-size: 0.6rem;
+      font-size: 0.4rem;
     }
 
     .header-logo span {
@@ -213,7 +213,7 @@
   @media (max-width: 768px) {
     .hero-section {
       height: 100vh;
-      margin-bottom: -20px;
+      margin-bottom: 10px;
     }
 
     .hero-btn {
