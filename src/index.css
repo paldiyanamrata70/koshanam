@@ -479,7 +479,7 @@
     }
   }
 
-  .fabric-title { 
+  .fabric-title {
     @apply font-cinzel font-normal text-foreground mt-0 mb-10;
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     transform: translateY(500px) scale(1);
@@ -599,6 +599,7 @@
   /* Reviews */
   .reviews-section {
     @apply py-[clamp(1rem,3vw,1.5625rem)] text-center bg-accent;
+    font-family: 'DM Sans', sans-serif;
   }
 
   .testimonial-container {
@@ -619,7 +620,8 @@
   }
   
   .comment {
-    @apply text-base text-foreground leading-[1.4] text-left font-medium whitespace-nowrap;
+    @apply text-lg text-foreground leading-[1.4] text-left font-normal whitespace-nowrap;
+    font-family: 'DM Sans', sans-serif;
   }
   
   /* Watch Finest */
@@ -1029,11 +1031,11 @@
     text-align: center;
     color: #fff;
 
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inria Sans', sans-serif;
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5;
     letter-spacing: 0.035em;
-    font-weight: 100;
+    font-weight: 200;
 
     /* CRITICAL FIXES */
     white-space: normal;

@@ -4,12 +4,12 @@ const ReviewsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
-    { letter: 'N', name: 'Nisha, Mumbai', text: 'Absolutely love the fabric quality.' },
-    { letter: 'N', name: 'Nisha, Mumbai', text: 'The design is so elegant yet comfortable. I keep coming back for more.' },
-    { letter: 'K', name: 'Kavya, Bengaluru', text: 'Every outfit feels classy without being heavy.' },
-    { letter: 'R', name: 'Rhea, Delhi', text: 'The finishing and detailing are really impressive.' },
-    { letter: 'I', name: 'Isha, Ahmedabad', text: 'Beautiful colors, perfect fit, and amazing finishing.' },
-    { letter: 'A', name: 'Aditi, Pune', text: "Kosha's clothes make me feel confident and effortless." },
+    { letter: 'N', name: 'Nisha, Mumbai -', text: 'Absolutely love the fabric quality.' },
+    { letter: 'N', name: 'Nisha, Mumbai -', text: 'The design is so elegant yet comfortable. I keep coming back for more.' },
+    { letter: 'K', name: 'Kavya, Bengaluru -', text: 'Every outfit feels classy without being heavy.' },
+    { letter: 'R', name: 'Rhea, Delhi -', text: 'The finishing and detailing are really impressive.' },
+    { letter: 'I', name: 'Isha, Ahmedabad -', text: 'Beautiful colors, perfect fit, and amazing finishing.' },
+    { letter: 'A', name: 'Aditi, Pune -', text: "Kosha's clothes make me feel confident and effortless." },
   ];
 
   useEffect(() => {
