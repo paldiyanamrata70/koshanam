@@ -11,25 +11,24 @@ const FabricArtistry = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const fabrics = [
-    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG', '/pictures/fabric9.JPG',
+    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG','/pictures/fabric3.JPG', 
      '/pictures/fabric5.JPG','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
-    '/pictures/fabric7.JPG', '/pictures/fabric3.JPG','/pictures/fabric11.JPG', 
+    '/pictures/fabric7.JPG', '/pictures/fabric9.JPG','/pictures/fabric11.JPG', 
     '/pictures/fabric10.JPG', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
   ];
 
   const buttonTexts = [
     'Chiffon',
     'Maheshwari Chanderi',
-    'Maheshwari',
+    'Kanjivaram ',
     'Banarasi',
     'Kota silk',
     'Kora',
     'Katan Banarasi',
-        'Kanjivaram ',
-     'Banarasi',
+     'Maheshwari',
+    'Banarasi',
     'Banarasi',
     'Tissue Katan Banarasi',
-
     'Banarasi',
   ];
 
@@ -183,7 +182,7 @@ const FabricArtistry = () => {
           border: 1px solid #733B5B;
           padding: 8px 30px;
           border-radius: 20px;
-          font-family: serif;
+          font-family: 'DM Sans', sans-serif;
           text-transform: uppercase;
           font-size: 0.8rem;
           color: #733B5B;

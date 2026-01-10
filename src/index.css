@@ -160,6 +160,7 @@
   .nav-links a {
     @apply block no-underline text-foreground/80 my-[22px] mx-auto transition-all duration-300 relative w-fit;
     font-size: clamp(1.25rem, 2.5vw, 1.375rem);
+    font-family: 'DM Sans', sans-serif;
   }
 
   .nav-links a:hover {
