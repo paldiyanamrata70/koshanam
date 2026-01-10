@@ -11,10 +11,25 @@ const FabricArtistry = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const fabrics = [
-    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG', '/pictures/fabric3.JPG',
+    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG', '/pictures/fabric12.JPG',
     '/pictures/fabric4.JPG', '/pictures/fabric5.JPG', '/pictures/fabric6.jpg',
-    '/pictures/fabric7.JPG', '/pictures/fabric8.JPG', '/pictures/fabric9.JPG',
-    '/pictures/fabric10.JPG', '/pictures/fabric11.JPG', '/pictures/fabric12.JPG',
+    '/pictures/fabric7.JPG', '/pictures/fabric11.JPG', '/pictures/fabric9.JPG',
+    '/pictures/fabric10.JPG', '/pictures/fabric8.JPG', '/pictures/fabric3.JPG',
+  ];
+
+  const buttonTexts = [
+    'Chiffon',
+    'Maheshwari Chanderi',
+    'Banarasi',
+    'Tissue Katan Banarasi',
+    'Banarasi',
+    'Kora',
+    'Katan Banarasi',
+    'Banarasi',
+    'Maheshwari',
+    'Banarasi',
+    'Kota Silk',
+    'Kanjivaram ',
   ];
 
   const animations = ['fabric-sway', 'fabric-3d', 'fabric-bounce'];
@@ -92,11 +107,12 @@ const FabricArtistry = () => {
       ref={sectionRef}
       className="fabric-section"
       style={{
-        paddingTop: '80px',
-        overflowX: 'visible',
+        paddingTop: '85px',
+        overflowX: 'auto',
         overflowY: 'hidden',
-        backgroundColor: 'rgb(252,238,232)',
-        height: '700px',
+        backgroundColor: 'rgb(252, 238, 232)',
+        height: '650px',
+        position: 'relative',
       }}
     >
       <style dangerouslySetInnerHTML={{ __html: `
@@ -115,7 +131,7 @@ const FabricArtistry = () => {
         }
         .curved-img {
           width: clamp(250px, 30vw, 350px);
-          height: clamp(350px, 40vw, 450px);
+          height: clamp(320px, 36vw, 450px);
           object-fit: cover;
           border-radius: 40px;
         }
@@ -141,13 +157,13 @@ const FabricArtistry = () => {
             transform: rotateY(0deg) rotateX(0deg) skew(0deg, 0deg);
           }
           25% {
-            transform: rotateY(15deg) rotateX(0deg) skew(0deg, 1deg);
+            transform: rotateY(10deg) rotateX(0deg) skew(0deg, 0.5deg);
           }
           50% {
-            transform: rotateY(-15deg) rotateX(0deg) skew(0deg, -1deg);
+            transform: rotateY(-10deg) rotateX(0deg) skew(0deg, -0.5deg);
           }
           75% {
-            transform: rotateY(0deg) rotateX(10deg) skew(1deg, 0deg);
+            transform: rotateY(0deg) rotateX(5deg) skew(0.5deg, 0deg);
           }
           100% {
             transform: rotateY(0deg) rotateX(0deg) skew(0deg, 0deg);
@@ -220,8 +236,8 @@ const FabricArtistry = () => {
           display: 'flex',
           flexDirection: 'row',
           overflowX: 'auto',
-          gap: 'clamp(20px, 5vw, 50px)',
-          padding: 'clamp(20px, 5vw, 40px) clamp(20px, 10vw, 50px) clamp(10px, 2vw, 20px)',
+          gap: '50px',
+          padding: '40px 50px 20px',
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
         }}
@@ -238,9 +254,8 @@ const FabricArtistry = () => {
               src={fabric}
               alt={`Fabric ${index + 1}`}
               className="curved-img fabric-sway"
-              style={{ transform: 'translateY(-5px)' }}
             />
-            <button className="simple-btn">kanjivaram</button>
+            <button className="simple-btn">{buttonTexts[index]}</button>
           </div>
         ))}
       </div>

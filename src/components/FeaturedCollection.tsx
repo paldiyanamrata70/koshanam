@@ -86,11 +86,6 @@ const FeaturedCollection = () => {
           opacity: 1;
           transform: translateY(0);
         }
-        @media (max-width: 768px) {
-          .fabric-title {
-            font-size: 1.4rem;
-          }
-        }
       `}} />
       <h2 className="decorative-title mb-[38px] mt-0">Featured Collection</h2>
       <div className="extended-grid">

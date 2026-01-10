@@ -29,7 +29,7 @@ const Header = ({ onToggleSidebar }: HeaderProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-[1400px] mx-auto py-[20px] px-10 flex justify-between items-center">
+      <div className="w-full py-4 px-4 md:py-5 md:px-6 lg:py-[20px] lg:px-10 flex justify-between items-center">
         <div className="header-logo">
           <h1 className={`font-bold ${isHovered ? 'text-primary' : 'text-white'}`}>
             K·O·S·H·A
