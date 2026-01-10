@@ -432,28 +432,13 @@
     }
 
     /* Subtle zoom for hero images (blouse, kurties, saree) */
-    .hero-section .blouse-slide {
-      background-size: 140% !important;
-      background-position: center bottom !important;
-      transform: translateY(-80px) !important;
-    }
-
-    .hero-section .saree-slide {
-      background-size: 130% !important;
-      background-position: center center !important;
-      transform: translateY(-80px) !important;
-    }
-
-    .hero-section .kurties-slide {
+    .hero-section .blouse-slide,
+    .hero-section .saree-slide,
+    .hero-section .kurties-slide,
+    .hero-section .home-slide {
       background-size: 120% !important;
       background-position: center bottom !important;
       transform: translateY(-160px) !important;
-    }
-
-    .hero-section .home-slide {
-      background-size: 130% !important;
-      background-position: center bottom !important;
-      transform: translateY(-10px) !important;
     }
 
     /* Zoom for home image in WatchFinest */
@@ -1372,7 +1357,7 @@
   }
 
   .hero-center {
-    @apply bottom-[15%];
+    @apply bottom-[30%];
   }
 
   .extended-grid {
