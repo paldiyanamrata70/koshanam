@@ -223,7 +223,7 @@ const FabricArtistry = () => {
           background: rgb(252,238,232);
         }
         .fabric-row::-webkit-scrollbar-thumb {
-          background: rgb(252,238,232);
+          background: rgb(115, 59, 91);
           border-radius: 4px;
         }
       `}} />
@@ -238,8 +238,6 @@ const FabricArtistry = () => {
           overflowX: 'auto',
           gap: '50px',
           padding: '40px 50px 20px',
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none',
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}

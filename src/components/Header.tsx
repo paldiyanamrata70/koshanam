@@ -42,7 +42,7 @@ const Header = ({ onToggleSidebar }: HeaderProps) => {
           className="flex items-center cursor-pointer"
           onClick={onToggleSidebar}
         >
-          <div className="hamburger">
+          <div className="hamburger" style={{ marginLeft: '-40px' }}>
             <span className={`transition-colors duration-300 ${isHovered ? 'bg-primary' : 'bg-white'}`}></span>
             <span className={`transition-colors duration-300 ${isHovered ? 'bg-primary' : 'bg-white'}`}></span>
             <span className={`transition-colors duration-300 ${isHovered ? 'bg-primary' : 'bg-white'}`}></span>

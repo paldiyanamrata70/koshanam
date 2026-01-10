@@ -193,6 +193,7 @@
   .hero-btn {
     @apply py-3.5 px-9 border border-white/80 rounded-[25px] text-white no-underline text-sm uppercase tracking-[2px] backdrop-blur-sm transition-all duration-300;
     font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
   }
 
   .hero-btn:hover {
@@ -460,7 +461,7 @@
   .image-text {
     @apply absolute bottom-2.5 left-0 right-0 text-center m-0 font-normal text-[17px] tracking-[0.8px] text-white capitalize z-20;
     font-family: 'DM Sans', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
   }
   
   /* Fabric Artistry */
@@ -1005,7 +1006,7 @@
     display: flex;
     justify-content: space-between;
     font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-    font-weight: 500;
+    font-weight: 700;
   }
 
   
@@ -1034,7 +1035,7 @@
 
     font-family: 'DM Sans', sans-serif;
     font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: 0.035em;
     font-weight: 200;
 
@@ -1440,3 +1441,4 @@
     font-size: 1.5rem;
   }
 }
+
