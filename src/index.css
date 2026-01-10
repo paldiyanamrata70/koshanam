@@ -147,6 +147,16 @@
     font-size: clamp(0.625rem, 1.5vw, 0.75rem);
   }
 
+  @media (max-width: 768px) {
+    .header-logo h1 {
+      font-size: 1.25rem;
+    }
+
+    .header-logo span {
+      font-size: 0.5rem;
+    }
+  }
+
   /* Hamburger */
   .hamburger {
     @apply flex flex-col gap-[5px];
