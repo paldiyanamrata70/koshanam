@@ -180,11 +180,12 @@ const FabricArtistry = () => {
         .simple-btn {
           margin-top: 15px;
           border: 1px solid #733B5B;
-          padding: 8px 30px;
+          padding: 10px 35px;
           border-radius: 20px;
           font-family: 'DM Sans', sans-serif;
           text-transform: uppercase;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
+          font-weight: 500;
           color: #733B5B;
           cursor: pointer;
         }
