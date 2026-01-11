@@ -319,6 +319,13 @@
     min-height: clamp(50rem, 100vh, 63.125rem);
   }
 
+  @media (max-width: 768px) {
+    .extended-collection {
+      margin-top: 7rem !important;
+      padding-top: 5rem !important;
+    }
+  }
+
   .extended-grid {
     @apply mt-5 max-w-[min(90vw,1000px)] mx-auto grid grid-cols-3 justify-items-center;
     gap: clamp(1rem, 3vw, 3.125rem);
