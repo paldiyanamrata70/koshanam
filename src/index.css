@@ -1281,13 +1281,31 @@
     /* animation removed */
   }
 
-  @keyframes fadeInLogo {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+  @keyframes circleBounce {
+    0% { transform: translateX(-40px) translateY(0); }
+    16.67% { transform: translateX(-20px) translateY(150px); }
+    33.33% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(20px) translateY(120px); }
+    66.67% { transform: translateX(40px) translateY(0); }
+    83.33% { transform: translateX(60px) translateY(70px); }
+    100% { transform: translateX(80px) translateY(0); }
   }
 
-  .logo-fade-in {
-    animation: fadeInLogo 1s ease-in-out;
+  .circle-bounce {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: circleBounce 1.5s ease-in-out;
+  }
+
+  @keyframes logoScale {
+    0% { transform: scale(0) translateY(50px); opacity: 0; }
+    100% { transform: scale(3) translateY(50px); opacity: 1; }
+  }
+
+  .logo-scale {
+    animation: logoScale 2s ease-in-out forwards;
+    transform-origin: center;
   }
 }
 
