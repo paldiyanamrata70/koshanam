@@ -25,7 +25,7 @@ const FacesOfKosha = () => {
 
   return (
     <section id="faces-of-kosha" className="faces" ref={sectionRef}>
-      <h2 className="faces-title">faces of kosha</h2>
+      <h2 className="faces-title">face of kosha</h2>
       <div className={`faces-text ${isVisible ? 'reveal active' : 'reveal'}`}>
         Kosha is led by Krishna Mahadik, driven by a belief in slow, intentional fashion.
 The brand brings together skilled artisans and contemporary design to create handcrafted sarees
