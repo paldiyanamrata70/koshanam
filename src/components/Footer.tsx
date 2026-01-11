@@ -9,7 +9,7 @@ const Footer = () => {
       const message = `Hello 👋🏻
 🌸KOSHA -Fabric Artistry At Its Finest🌸
 I admire your design aesthetic and would love updates on new launches, collections, and exclusive previews. ✨`;
-      const url = `whatsapp://send?phone=9146943832&text=${encodeURIComponent(message)}`;
+      const url = `whatsapp://send?phone=917776061122&text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }
   };
