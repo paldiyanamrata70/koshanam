@@ -273,7 +273,7 @@
 
   @media (max-width: 768px) {
     .story-section {
-      @apply -mt-[90px];
+      @apply -mt-[11.25vh];
     }
   }
 
@@ -336,7 +336,7 @@
 
   @media (max-width: 768px) {
     .divider-band {
-      @apply h-[100px];
+      @apply h-[12.5vh];
     }
 
     .mobile-only {
@@ -378,8 +378,8 @@
 
   @media (max-width: 768px) {
     .extended-collection {
-      margin-top: 7rem !important;
-      padding-top: 6rem !important;
+      margin-top: 14vh !important;
+      padding-top: 12vh !important;
     }
 
     .extended-collection.animate-up {
@@ -550,8 +550,8 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -600px !important;
-      height: 600px !important;
+      margin-top: -75vh !important;
+      height: 75vh !important;
     }
   }
 
@@ -1312,7 +1312,7 @@
     }
 
   .story-section {
-    @apply py-[130px];
+    @apply py-[16vh];
   }
 
   .story-section {
@@ -1334,11 +1334,11 @@
   }
 
   .journey-video-box {
-    @apply h-[600px] w-[90%];
+    @apply h-[75vh] w-[90%];
   }
 
   .image-box {
-    @apply w-[280px] h-[400px];
+    @apply w-[35vw] h-[50vh];
   }
 
   .images-row {
@@ -1399,7 +1399,7 @@
   }
 
   .image-placeholder {
-    @apply w-full h-[260px];
+    @apply w-full h-[32.5vh];
   }
 
 
