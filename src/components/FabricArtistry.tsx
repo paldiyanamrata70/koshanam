@@ -7,8 +7,10 @@ const FabricArtistry = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [parallaxY, setParallaxY] = useState(0);
+  const [showLogo, setShowLogo] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const thirdRef = useRef<HTMLDivElement>(null);
 
   const fabrics = [
     '/pictures/fabric1.JPG', '/pictures/fabric2.JPG','/pictures/fabric3.JPG', 
@@ -66,6 +68,21 @@ const FabricArtistry = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowLogo(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    if (thirdRef.current) observer.observe(thirdRef.current);
+    return () => observer.disconnect();
+  }, []);
+
 
   useEffect(() => {
     const curvedImgs = document.querySelectorAll('.curved-img');
@@ -118,6 +135,7 @@ const FabricArtistry = () => {
       <style dangerouslySetInnerHTML={{ __html: `
         .fabric-container {
           flex: 0 0 auto;
+          position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -227,6 +245,33 @@ const FabricArtistry = () => {
           background: rgb(115, 59, 91);
           border-radius: 4px;
         }
+        .logo-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          pointer-events: none;
+        }
+        .logo-appear {
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
+          animation: logoAppear 1s ease-out;
+        }
+        @keyframes logoAppear {
+          0% {
+            transform: scale(0);
+            opacity: 0;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
       `}} />
 
       {/* 2. Scrollable Area: Moves independently of the title */}
@@ -247,6 +292,7 @@ const FabricArtistry = () => {
         {fabrics.map((fabric, index) => (
           <div
             key={index}
+            ref={index === 2 ? thirdRef : undefined}
             className={`fabric-container ${showImages ? 'show' : ''}`}
           >
             <img

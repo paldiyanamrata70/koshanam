@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,25 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Splash from "./components/Splash";
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [showingSplash, setShowingSplash] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowingSplash(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (showingSplash) {
-    return <Splash />;
-  }
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
