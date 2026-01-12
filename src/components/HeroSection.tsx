@@ -54,6 +54,9 @@ const HeroSection = () => {
            />
          ))}
       </div>
+      <div className="hero-overlay">
+        <h2 className="hero-title">Celebrating Kosha</h2>
+      </div>
       <div className="hero-center">
         <a href="#collection" className="hero-btn">
           Our Collection →
