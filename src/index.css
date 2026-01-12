@@ -272,7 +272,8 @@
   
   /* Story Section */
    .story-section {
-    @apply py-[clamp(3rem,8vw,5.625rem)] px-5 text-center;
+    margin-top: 80px;
+    /* @apply py-[clamp(3rem,8vw,5.625rem)] px-5 text-center; */
   }
 
   @media (max-width: 768px) {
@@ -1384,7 +1385,7 @@
   }
 
   .decorative-title {
-    margin-top: -30px !important;
+    margin-top: 0 !important;
   }
 
 
