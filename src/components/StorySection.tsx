@@ -54,7 +54,7 @@ const StorySection = () => {
 
   return (
     <section id="about" className="story-section" ref={sectionRef}>
-      <h2 className="decorative-title text-center mb-[0.5px] md:mb-[35px] mt-0">Celebrating Kosha</h2>
+      <h2 className="decorative-title md:text-center mb-[0.5px] md:mb-[35px] mt-0">Celebrating Kosha</h2>
       <div className={`story-text ${isVisible ? 'reveal active' : 'reveal'}`}>
         <p>Kosha, The colours and patterns tell the stories weaving, flaunting a unique timelessness, is a modern clothing brand rooted in fine craftsmanship and thoughtful design.</p>
         <p>Every piece is created with a deep respect for fabric artistry, blending traditional techniques with contemporary style to offer women clothing that feels elegant, expressive, and timeless. Kosha celebrates individuality through refined fashion made with passion and purpose.</p>

@@ -313,7 +313,7 @@
 
   @media (max-width: 768px) {
     .story-stats {
-      @apply text-[11px] mb-[20px];
+      @apply text-[11px] mb-[20px] gap-[30px];
     }
 
     .story-stats strong {
@@ -443,8 +443,8 @@
 
   @media (max-width: 768px) {
     .extended-collection {
-      margin-top: 14vh !important;
-      padding-top: 12vh !important;
+      margin-top: 16vh !important;
+      padding-top: 9vh !important;
     }
 
     .extended-collection.animate-up {
@@ -1203,6 +1203,13 @@
       font-size: 1rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .faces {
+      @apply py-[3rem];
+      background-position: center top;
+    }
+  }
   
   /* Map Section */
   .map-section {
@@ -1448,7 +1455,7 @@
   }
 
   .comment {
-    @apply text-lg text-center whitespace-normal;
+    @apply text-base text-center whitespace-normal;
   }
 
   .hero-center {
@@ -1527,11 +1534,12 @@
   }
 
   .fabric-card {
-    width: 200px;
-    height: 200px;
+    width: 80px !important;
+    height: 80px !important;
   }
 
   .fabric-title {
     font-size: 1.5rem;
   }
 }
+
