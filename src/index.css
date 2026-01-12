@@ -1342,7 +1342,7 @@
   }
 
   .images-row {
-    @apply gap-[35px] pl-[20px];
+    @apply gap-[40px] pl-[20px];
   }
 
 
