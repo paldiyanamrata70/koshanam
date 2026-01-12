@@ -241,6 +241,12 @@
     @apply py-[clamp(3rem,8vw,5.625rem)] px-5 text-center;
   }
 
+  @media (max-width: 768px) {
+    .story-section {
+      @apply -mt-[30px];
+    }
+  }
+
   .decorative-title {
     @apply font-cinzel font-normal text-foreground;
     font-size: clamp(1.5rem, 4vw, 2.625rem);
@@ -341,6 +347,19 @@
       margin-top: 7rem !important;
       padding-top: 5rem !important;
     }
+
+    .extended-collection.animate-up {
+      animation: slideUp 1s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
   }
 
   .extended-grid {
@@ -400,7 +419,7 @@
   }
 
   .zoom-in {
-    transform: scale(1.01) !important;
+    transform: translateX(0) scale(1) !important;
   }
 
   /* Zoom for specific images in FeaturedCollection */
@@ -454,7 +473,7 @@
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       user-select: none;
-      transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+      transition: transform 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     }
 
     /* Subtle zoom for hero images (blouse, kurties, saree) */
@@ -1263,7 +1282,7 @@
   }
 
   .story-section {
-    padding-top: 1rem !important;
+    padding-top: 0 !important;
     padding-bottom: 2rem !important;
   }
 
