@@ -378,8 +378,8 @@
 
   @media (max-width: 768px) {
     .extended-collection {
-      margin-top: 6rem !important;
-      padding-top: 5rem !important;
+      margin-top: 7rem !important;
+      padding-top: 6rem !important;
     }
 
     .extended-collection.animate-up {
