@@ -522,7 +522,7 @@
 
     /* Zoom for home image in WatchFinest */
     .watch-finest img[src*="home.jpg"] {
-      transform: scale(1.8);
+      transform: scale(2.5);
       transition: transform 4s ease;
     }
   }
@@ -1338,11 +1338,11 @@
   }
 
   .image-box {
-    @apply w-[35vw] h-[50vh];
+    @apply w-[50vw] h-[65vh];
   }
 
   .images-row {
-    @apply gap-[15px] pl-[20px];
+    @apply gap-[35px] pl-[20px];
   }
 
 
