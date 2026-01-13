@@ -1450,12 +1450,12 @@
   }
 
   .watch-finest {
-    @apply pt-[70px] pb-0;
-  }
+   @apply pt-[70px] pb-4;
+ }
 
   .watch-title {
-    @apply mb-2;
-  }
+   @apply mt-2 mb-2;
+ }
 
   .watch-images-row {
     margin-top: -10px;
