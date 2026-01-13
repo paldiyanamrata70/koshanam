@@ -163,6 +163,9 @@ const FabricArtistry = () => {
           .fabric-row {
             padding-top: 60px;
           }
+          .fabric-section {
+            padding-top: 105px !important;
+          }
           .simple-btn {
             padding: 8px 25px !important;
             font-size: 0.7rem !important;
