@@ -766,6 +766,10 @@
     @apply text-lg text-foreground leading-[1.4] text-left font-normal whitespace-nowrap;
     font-family: 'DM Sans', sans-serif;
   }
+
+  .name-line {
+    display: contents;
+  }
   
   /* Watch Finest */
   .watch-finest {
@@ -1154,18 +1158,29 @@
 
   /* Faces of Kosha */
   .faces {
-    background-image: linear-gradient(rgba(122,50,50,0.5)), url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
+    background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    @apply py-[clamp(6rem,13vw,7rem)] px-5 text-center;
+    @apply py-[clamp(6rem,13vw,7rem)] px-5 text-center relative;
     margin-top: -2rem;
+  }
+
+  .faces::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(122,50,50,0.5));
+    background-size: cover;
+    z-index: 1;
   }
 
   .faces h2 {
     @apply font-cinzel font-normal text-white mb-[25px];
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
   }
 
   .faces-text {
@@ -1173,6 +1188,8 @@
     margin: 0 auto;
     text-align: center;
     color: #fff;
+    position: relative;
+    z-index: 2;
 
     font-family: 'DM Sans', sans-serif;     /*Josefin Sans*/
     font-size: 16px;
@@ -1210,6 +1227,10 @@
     .faces {
       @apply py-[3rem];
       background-position: center 70%;
+      background-size: 175%;
+    }
+
+    .faces::before {
       background-size: 175%;
     }
   }
@@ -1458,12 +1479,24 @@
   }
 
   .avatar {
-    @apply w-[50px] h-[50px];
+    @apply w-[35px] h-[35px];
   }
 
   .comment {
     @apply text-center whitespace-normal;
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  .name-line {
+    @apply flex items-center gap-2;
+  }
+
+  .avatar {
+    font-size: 16px;
+  }
+
+  .name {
+    font-size: 12px;
   }
 
   .hero-center {
@@ -1479,7 +1512,7 @@
   }
 
   .image-placeholder {
-    @apply w-full h-[40vh];
+    @apply w-full h-[30vh];
   }
 
   .image-text {

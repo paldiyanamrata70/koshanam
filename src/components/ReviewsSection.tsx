@@ -26,8 +26,10 @@ const ReviewsSection = () => {
     <section id="reviews" className="reviews-section">
       <div className="testimonial-container">
         <div className="testimonial fade" key={currentIndex}>
-          <div className="avatar">{current.letter}</div>
-          <div className="name">{current.name}</div>
+          <div className="name-line">
+            <div className="avatar">{current.letter}</div>
+            <div className="name">{current.name}</div>
+          </div>
           <span className="comment">"{current.text}"</span>
         </div>
       </div>
