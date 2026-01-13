@@ -161,7 +161,7 @@ const FabricArtistry = () => {
             height: clamp(400px, 55vw, 500px);
           }
           .fabric-row {
-            padding-top: 60px;
+            padding-top: 120px;
           }
           .fabric-section {
             padding-top: 105px !important;

@@ -618,6 +618,10 @@
       margin-top: -75vh !important;
       height: 75vh !important;
     }
+
+    .fabric-row {
+      transform: translateY(-75px);
+    }
   }
 
   .fabric-title {
@@ -1446,15 +1450,15 @@
   }
 
   .watch-finest {
-    @apply pt-[30px] pb-0;
+    @apply pt-[70px] pb-0;
   }
 
   .watch-title {
-    @apply mb-0;
+    @apply mb-2;
   }
 
   .watch-images-row {
-    margin-top: -30px;
+    margin-top: -10px;
   }
 
 
