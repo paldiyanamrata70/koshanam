@@ -1411,17 +1411,11 @@
   }
 
   .image-box {
-    @apply w-[60vw] h-[75vh];
-  }
-
-  @media (max-width: 480px) {
-    .image-box {
-      @apply w-[65vw] h-[80vh];
-    }
+    @apply w-[50vw] h-[65vh];
   }
 
   .images-row {
-    @apply gap-[40px] pl-[20px] pr-[20px];
+    @apply gap-[40px] pl-[20px];
   }
 
 

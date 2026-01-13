@@ -13,9 +13,9 @@ const FabricArtistry = () => {
   const thirdRef = useRef<HTMLDivElement>(null);
 
   const fabrics = [
-    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG','/pictures/fabric3.JPG', 
+    '/pictures/fabric1.JPG', '/pictures/fabric2.JPG','/pictures/fabric3.JPG',
      '/pictures/fabric5.JPG','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
-    '/pictures/fabric7.JPG', '/pictures/fabric9.JPG','/pictures/fabric11.JPG', 
+    '/pictures/fabric7.JPG', '/pictures/fabric9.JPG','/pictures/fabric11.JPG',
     '/pictures/fabric10.JPG', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
   ];
 
@@ -148,15 +148,15 @@ const FabricArtistry = () => {
           transform: translateY(0);
         }
         .curved-img {
-          width: 350px;
-          height: 450px;
+          width: clamp(250px, 25vw, 350px);
+          height: clamp(350px, 35vw, 450px);
           object-fit: cover;
           border-radius: 40px;
         }
         @media (max-width: 768px) {
           .curved-img {
-            width: 250px;
-            height: 350px;
+            width: clamp(200px, 30vw, 250px);
+            height: clamp(280px, 40vw, 350px);
           }
           .fabric-row {
             padding-top: 100px;
