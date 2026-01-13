@@ -615,7 +615,7 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -75vh !important;
+      margin-top: -80vh !important;
       height: 75vh !important;
     }
   }
@@ -624,6 +624,7 @@
     @apply font-cinzel font-normal text-foreground mt-0 mb-10;
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     transform: translateY(500px) scale(1);
+    margin-top: -30px !important;
   }
 
   .fabric-title.animate {
@@ -812,6 +813,18 @@
     object-fit: contain;
     -webkit-transform: translateZ(0) translateY(-5px);
     transform: translateZ(0) translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    .watch-finest {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .images-row {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
   }
 
   .image-box p {
