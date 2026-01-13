@@ -1227,7 +1227,7 @@
     .faces {
       @apply py-[3rem];
       background-position: center 70%;
-      background-size: 195%;
+      background-size: 210%;
     }
 
     .faces::before {
@@ -1443,6 +1443,10 @@
 
   .image-box:nth-child(3) {
     margin-right: 30px;
+  }
+
+  .watch-finest {
+    @apply pt-[30px] pb-0;
   }
 
 
