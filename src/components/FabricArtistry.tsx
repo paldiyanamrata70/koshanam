@@ -124,7 +124,7 @@ const FabricArtistry = () => {
       ref={sectionRef}
       className="fabric-section"
       style={{
-        paddingTop: '85px',
+        paddingTop: 'clamp(120px, 15vw, 100px)',
         overflowX: 'auto',
         overflowY: 'hidden',
         backgroundColor: 'rgb(252, 238, 232)',
@@ -164,7 +164,9 @@ const FabricArtistry = () => {
             padding-top: 120px;
           }
           .fabric-section {
-            padding-top: 105px !important;
+            position: sticky;
+            top: 0;
+            z-index: 15;
           }
           .simple-btn {
             padding: 8px 25px !important;
