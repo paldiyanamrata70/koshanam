@@ -254,7 +254,7 @@
     }
 
     .hero-title {
-      margin-top: clamp(600px, 115vh, 620px) !important; /* Responsive position in mobile */
+      margin-top: clamp(610px, 120vh, 630px) !important; /* Responsive position in mobile */
     }
 
     .hero-btn {
@@ -313,7 +313,7 @@
 
   @media (max-width: 768px) {
     .story-stats {
-      @apply text-[11px] mb-[20px] gap-[30px];
+      @apply text-[11px] mb-[20px] gap-[25px];
     }
 
     .story-stats strong {
@@ -655,7 +655,7 @@
     scroll-snap-type: x mandatory;
     width: max-content;
     transition: transform 0.5s ease;
-    transform: translateY(-100px);
+    transform: translateY(-125px);
   }
 
   /* Mobile: center first image */
