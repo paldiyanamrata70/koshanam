@@ -1473,7 +1473,7 @@
   }
 
   .image-placeholder {
-    @apply w-full h-[32.5vh];
+    @apply w-full h-[40vh];
   }
 
   .image-text {
