@@ -155,8 +155,8 @@ const FabricArtistry = () => {
         }
         @media (max-width: 768px) {
           .curved-img {
-            width: clamp(200px, 30vw, 250px);
-            height: clamp(280px, 40vw, 350px);
+            width: clamp(250px, 45vw, 400px);
+            height: clamp(336px, 48vw, 420px);
           }
           .fabric-row {
             padding-top: 100px;
