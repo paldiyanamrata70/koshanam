@@ -205,7 +205,7 @@
 
   .hero-overlay {
     @apply absolute inset-0 flex items-center justify-center;
-    padding-top: 20vh; /* Move down a little */
+    padding-top: 0; /* Remove fixed padding */
   }
 
   .hero-title {
@@ -254,7 +254,7 @@
     }
 
     .hero-title {
-      margin-top: 60vh !important; /* Adjust position in mobile */
+      margin-top: clamp(600px, 115vh, 620px) !important; /* Responsive position in mobile */
     }
 
     .hero-btn {
