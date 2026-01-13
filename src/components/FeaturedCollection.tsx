@@ -106,7 +106,7 @@ const FeaturedCollection = () => {
         .fabric-title {
           text-align: center;
           font-size: clamp(1.5rem, 4vw, 2.625rem);
-          margin-bottom: 60px;
+          margin-bottom: clamp(40px, 8vw, 60px);
           margin-top: 100px;
           opacity: 0;
           transform: scale(0);
@@ -116,6 +116,7 @@ const FeaturedCollection = () => {
           .fabric-title {
             font-size: 1.5rem !important;
             margin-top: 60px !important;
+            margin-bottom: 40px !important;
           }
         }
         .fabric-title.animate {

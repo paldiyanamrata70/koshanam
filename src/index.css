@@ -255,6 +255,7 @@
 
     .hero-title {
       margin-top: clamp(610px, 120vh, 630px) !important; /* Responsive position in mobile */
+      font-size: 1.35rem;
     }
 
     .hero-btn {
@@ -313,7 +314,7 @@
 
   @media (max-width: 768px) {
     .story-stats {
-      @apply text-[11px] mb-[20px] gap-[25px];
+      @apply text-[11px] mb-[20px] gap-[10px];
     }
 
     .story-stats strong {
@@ -379,6 +380,7 @@
 
   .story-text {
     @apply mt-0;
+    font-size: 15px;
   }
 }  */
 
@@ -615,8 +617,8 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -75vh !important;
-      height: 75vh !important;
+      margin-top: -80vh !important;
+      height: 70vh !important;
     }
 
     .fabric-row {
@@ -637,7 +639,9 @@
 
   @keyframes titleZoom {
     0% { transform: translateY(500px) scale(1); }
-    33% { transform: translateY(300px) scale(0.5); }
+    25% { transform: translateY(400px) scale(0.8); }
+    50% { transform: translateY(200px) scale(0.6); }
+    75% { transform: translateY(100px) scale(0.8); }
     100% { transform: translateY(0) scale(1); }
   }
 
@@ -1426,11 +1430,27 @@
 
 
   .decorative-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .faces-text {
-    font-size: 0.875rem;
+    font-size: 15px;
+  }
+
+  .journey-title {
+    font-size: 1.35rem;
+  }
+
+  .watch-title {
+    font-size: 1.35rem;
+  }
+
+  .artisanal-section h2 {
+    font-size: 1.35rem;
+  }
+
+  .faces-title {
+    font-size: 1.35rem;
   }
 
   .journey-video-box {
@@ -1495,12 +1515,12 @@
   }
 
   .avatar {
-    @apply w-[35px] h-[35px];
+    @apply w-[30px] h-[30px];
   }
 
   .comment {
     @apply text-center whitespace-normal;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .name-line {
@@ -1508,11 +1528,12 @@
   }
 
   .avatar {
-    font-size: 16px;
+    font-size: 11px;
+    font-weight: 400;
   }
 
   .name {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .hero-center {
@@ -1528,7 +1549,7 @@
   }
 
   .image-placeholder {
-    @apply w-full h-[35vh];
+    @apply w-full h-[40vh];
   }
 
   .image-text {
@@ -1600,7 +1621,7 @@
   }
 
   .fabric-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin-top: -30px;
   }
 }
