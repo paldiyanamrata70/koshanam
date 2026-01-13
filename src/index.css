@@ -1207,7 +1207,8 @@
   @media (max-width: 768px) {
     .faces {
       @apply py-[3rem];
-      background-position: center top;
+      background-position: center 70%;
+      background-size: 160%;
     }
   }
   
@@ -1402,7 +1403,7 @@
   }
 
   .faces-text {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .journey-video-box {
@@ -1455,7 +1456,8 @@
   }
 
   .comment {
-    @apply text-base text-center whitespace-normal;
+    @apply text-center whitespace-normal;
+    font-size: 15px;
   }
 
   .hero-center {
@@ -1472,6 +1474,10 @@
 
   .image-placeholder {
     @apply w-full h-[32.5vh];
+  }
+
+  .image-text {
+    font-size: 14px;
   }
 
 
