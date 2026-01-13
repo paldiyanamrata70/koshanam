@@ -1434,7 +1434,7 @@
   }
 
   .image-box {
-    @apply w-[70vw] h-[80vh];
+    @apply w-[70vw] h-[70vh];
   }
 
   .images-row {
@@ -1447,6 +1447,14 @@
 
   .watch-finest {
     @apply pt-[30px] pb-0;
+  }
+
+  .watch-title {
+    @apply mb-0;
+  }
+
+  .watch-images-row {
+    margin-top: -30px;
   }
 
 
@@ -1516,7 +1524,7 @@
   }
 
   .image-placeholder {
-    @apply w-full h-[30vh];
+    @apply w-full h-[35vh];
   }
 
   .image-text {
