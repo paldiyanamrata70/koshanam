@@ -1210,7 +1210,7 @@
     .faces {
       @apply py-[3rem];
       background-position: center 70%;
-      background-size: 160%;
+      background-size: 175%;
     }
   }
   
@@ -1413,11 +1413,15 @@
   }
 
   .image-box {
-    @apply w-[50vw] h-[65vh];
+    @apply w-[70vw] h-[80vh];
   }
 
   .images-row {
     @apply gap-[40px] pl-[20px];
+  }
+
+  .image-box:nth-child(3) {
+    margin-right: 30px;
   }
 
 
