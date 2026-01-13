@@ -152,11 +152,13 @@ const FabricArtistry = () => {
           height: clamp(350px, 35vw, 450px);
           object-fit: cover;
           border-radius: 40px;
+          will-change: transform;
+          backface-visibility: hidden;
         }
         @media (max-width: 768px) {
           .curved-img {
-            width: clamp(250px, 45vw, 400px);
-            height: clamp(336px, 48vw, 420px);
+            width: clamp(300px, 50vw, 450px);
+            height: clamp(400px, 55vw, 500px);
           }
           .fabric-row {
             padding-top: 100px;
