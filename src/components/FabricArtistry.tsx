@@ -153,6 +153,19 @@ const FabricArtistry = () => {
           object-fit: cover;
           border-radius: 40px;
         }
+        @media (max-width: 768px) {
+          .curved-img {
+            width: 250px;
+            height: 350px;
+          }
+          .fabric-row {
+            padding-top: 100px;
+          }
+          .simple-btn {
+            padding: 8px 25px !important;
+            font-size: 0.7rem !important;
+          }
+        }
         .fabric-3d {
           animation: fabricFloat 6s ease-in-out infinite;
         }

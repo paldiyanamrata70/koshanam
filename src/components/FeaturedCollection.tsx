@@ -85,6 +85,7 @@ const FeaturedCollection = () => {
         @media (max-width: 768px) {
           .fabric-title {
             font-size: 1.5rem !important;
+            margin-top: 60px !important;
           }
         }
         .fabric-title.animate {
