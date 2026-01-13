@@ -118,6 +118,13 @@ const FabricArtistry = () => {
     };
   }, []);
 
+  const scroll = (direction: number) => {
+    if (scrollRef.current) {
+      const scrollAmount = 350; // approximate item width
+      scrollRef.current.scrollLeft += direction * scrollAmount;
+    }
+  };
+
   return (
     <div
       id="fabric"
@@ -290,6 +297,37 @@ const FabricArtistry = () => {
           100% {
             transform: scale(1);
             opacity: 1;
+          }
+        }
+        .fabric-scroll-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(115, 59, 91, 0.5);
+          border: none;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 24px;
+          cursor: pointer;
+          z-index: 10;
+          transition: background 0.3s;
+        }
+        .fabric-scroll-btn:hover {
+          background: rgba(115, 59, 91, 0.7);
+        }
+        .fabric-scroll-btn.left {
+          left: 16px;
+        }
+        .fabric-scroll-btn.right {
+          right: 16px;
+        }
+        @media (max-width: 768px) {
+          .fabric-scroll-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
           }
         }
       `}} />
