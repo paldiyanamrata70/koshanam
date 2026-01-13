@@ -615,7 +615,7 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -80vh !important;
+      margin-top: -75vh !important;
       height: 75vh !important;
     }
   }
@@ -624,7 +624,7 @@
     @apply font-cinzel font-normal text-foreground mt-0 mb-10;
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     transform: translateY(500px) scale(1);
-    margin-top: -30px !important;
+    margin-top: 70px !important;
   }
 
   .fabric-title.animate {
@@ -740,12 +740,13 @@
   
   /* Reviews */
   .reviews-section {
-    @apply py-[clamp(1rem,3vw,1.5625rem)] text-center bg-accent;
+    @apply py-[clamp(2rem,5vw,3rem)] text-center bg-accent;
     font-family: 'DM Sans', sans-serif;
   }
 
   .testimonial-container {
     @apply text-center max-w-[min(90vw,800px)] mx-auto;
+    margin-top: -1rem;
   }
   
   .testimonial {
@@ -813,18 +814,6 @@
     object-fit: contain;
     -webkit-transform: translateZ(0) translateY(-5px);
     transform: translateZ(0) translateY(-5px);
-  }
-
-  @media (max-width: 768px) {
-    .watch-finest {
-      padding-top: 2rem;
-      padding-bottom: 3rem;
-    }
-
-    .images-row {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
   }
 
   .image-box p {
@@ -1559,6 +1548,7 @@
 
   .fabric-title {
     font-size: 1.5rem;
+    margin-top: -30px;
   }
 }
 
