@@ -217,7 +217,7 @@
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(255,255,255,0.5); /* Adjust shadow for black text */
-    margin-top: clamp(270px, 52vh, 500px); /* Responsive margin-top to prevent movement */
+    margin-top: clamp(200px, 50vh, 430px); /* Responsive margin-top to prevent movement */
   }
 
   @media (min-width: 769px) {
@@ -242,7 +242,7 @@
 
   @media (max-width: 768px) {
     .hero-section {
-      height: 115dvh; /* "dynamic viewport height" — adjusts for mobile address bar */
+      height: 800px;
       width: 100%;
       overflow: hidden;
       margin-bottom: 10px;
@@ -254,7 +254,7 @@
     }
 
     .hero-title {
-      margin-top: 75vh !important; /* Move down more in mobile */
+      margin-top: 60vh !important; /* Adjust position in mobile */
     }
 
     .hero-btn {
@@ -313,7 +313,7 @@
 
   @media (max-width: 768px) {
     .story-stats {
-      @apply text-[11px] mb-[20px] gap-[20px];
+      @apply text-[11px] mb-[20px] gap-[30px];
     }
 
     .story-stats strong {
@@ -359,7 +359,7 @@
 }
 
 .story-stats {
-  @apply flex justify-center gap-[50px] text-[13px] text-foreground/70 tracking-[1px] mt-[20px] mb-[40px];
+  @apply flex justify-center gap-[50px] text-[13px] text-foreground/70 tracking-[1px] mt-[20px];
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
 }
@@ -443,7 +443,7 @@
 
   @media (max-width: 768px) {
     .extended-collection {
-      margin-top: 10vh !important;
+      margin-top: 16vh !important;
       padding-top: 9vh !important;
     }
 
@@ -739,7 +739,7 @@
   
   /* Reviews */
   .reviews-section {
-    @apply py-[clamp(1.5rem,4vw,2.5rem)] text-center bg-accent;
+    @apply py-[clamp(1rem,3vw,1.5625rem)] text-center bg-accent;
     font-family: 'DM Sans', sans-serif;
   }
 
@@ -761,19 +761,13 @@
   }
   
   .comment {
-    @apply text-lg text-foreground leading-[1.4] text-center font-normal whitespace-nowrap;
+    @apply text-lg text-foreground leading-[1.4] text-left font-normal whitespace-nowrap;
     font-family: 'DM Sans', sans-serif;
-  }
-
-  @media (min-width: 769px) {
-    .comment {
-      margin-top: -8px;
-    }
   }
   
   /* Watch Finest */
   .watch-finest {
-    @apply bg-blush py-10 pb-[clamp(3rem,8vw,4.25rem)] flex flex-col items-center;
+    @apply bg-blush py-20 pb-[clamp(5rem,10vw,6.25rem)] flex flex-col items-center;
   }
 
   .watch-title {
@@ -1214,7 +1208,7 @@
     .faces {
       @apply py-[3rem];
       background-position: center 70%;
-      background-size: 170%;
+      background-size: 160%;
     }
   }
   
@@ -1417,7 +1411,7 @@
   }
 
   .image-box {
-    @apply w-[55vw] h-[70vh];
+    @apply w-[50vw] h-[65vh];
   }
 
   .images-row {
@@ -1446,7 +1440,7 @@
   }
 
   .map-section iframe {
-    @apply block mx-auto w-full h-[350px];
+    @apply block mx-auto w-full h-[300px];
   }
 
   .reviews-section {
