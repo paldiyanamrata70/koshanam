@@ -242,7 +242,7 @@
 
   @media (max-width: 768px) {
     .hero-section {
-      height: 100dvh; /* "dynamic viewport height" — adjusts for mobile address bar */
+      height: 115dvh; /* "dynamic viewport height" — adjusts for mobile address bar */
       width: 100%;
       overflow: hidden;
       margin-bottom: 10px;
