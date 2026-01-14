@@ -323,6 +323,9 @@
 
     .story-text {
       @apply mt-0 text-center;
+      font-size: 12px;
+      line-height: 1.4;
+      max-width: min(85vw, 650px);
     }
   }
   
@@ -1234,10 +1237,10 @@
 
   @media (max-width: 768px) {
     .faces {
-      @apply py-[3rem];
+      @apply py-[2rem];
       background-image: url('/pictures/face of kosha.jpg');
       background-position: center 70%;
-      background-size: 210%;
+      background-size: 120%;
     }
 
     .faces::before {
