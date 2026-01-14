@@ -1120,7 +1120,7 @@
   /* Faces of Kosha */
   .faces {
     background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
-    background-size: 100% 100%;
+    background-size: 120% 120%;
     background-position: center;
     background-repeat: no-repeat;
     @apply py-[clamp(8rem,15vw,9rem)] px-5 text-center relative;
