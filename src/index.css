@@ -48,8 +48,8 @@
     --blush-dark: 20 50% 92%;
     
     /* Footer Maroon */
-    --footer: 333 55% 28%;
-    --footer-foreground: 0 0% 100%;
+    --footer: 18 77% 95%;
+    --footer-foreground: 0 0% 0%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -404,7 +404,7 @@
         transform: translateY(50px);
       }
       to {
-        transform: translateY(30);
+        transform: translateY(100);
       }
     }
   }
@@ -1206,7 +1206,7 @@
   
   /* Footer */
   .footer {
-    @apply bg-footer text-footer-foreground py-[clamp(3rem,8vw,4.375rem)] px-[clamp(2rem,5vw,3.125rem)] pb-10;
+    @apply bg-footer text-footer-foreground py-[clamp(3rem,8vw,4.375rem)] px-[clamp(2rem,5vw,3.125rem)] pb-5;
     font-family: 'DM Sans', sans-serif;
   }
 
@@ -1227,7 +1227,7 @@
   }
   
   .subscribe-btn {
-    @apply bg-secondary border border-white/40 text-white text-base py-3 px-[25px] rounded-2xl cursor-pointer transition-all duration-300 hover:bg-secondary/80 mt-8;
+    @apply bg-[#B47979]/30 border border-white/40 text-black font-light py-3 px-[25px] rounded-2xl cursor-pointer mt-8;
     min-height: 44px;
   }
   
@@ -1248,7 +1248,7 @@
   }
   
   .social-icons {
-    @apply flex gap-[35px] mt-2.5;
+    @apply flex gap-4 mt-2.5;
   }
   
   .social-icons i {
