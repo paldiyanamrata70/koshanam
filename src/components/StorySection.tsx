@@ -23,7 +23,7 @@ const StorySection = () => {
           }
         });
       },
-      { rootMargin: '-60px 0px 0px 0px', threshold: 0 }
+      { rootMargin: window.innerWidth <= 768 ? '0px 0px 0px 0px' : '-60px 0px 0px 0px', threshold: 0 }
     );
 
     if (sectionRef.current) {

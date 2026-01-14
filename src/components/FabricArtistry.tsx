@@ -64,7 +64,7 @@ const FabricArtistry = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { rootMargin: window.innerWidth <= 768 ? '0px 0px 0px 0px' : '0px 0px 0px 0px', threshold: window.innerWidth <= 768 ? 0.1 : 0.2 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -79,7 +79,7 @@ const FabricArtistry = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { rootMargin: window.innerWidth <= 768 ? '0px 0px 0px 0px' : '0px 0px 0px 0px', threshold: window.innerWidth <= 768 ? 0.3 : 0.5 }
     );
     if (thirdRef.current) observer.observe(thirdRef.current);
     return () => observer.disconnect();

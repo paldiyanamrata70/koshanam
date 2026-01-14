@@ -13,7 +13,7 @@ const FacesOfKosha = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { rootMargin: window.innerWidth <= 768 ? '0px 0px 0px 0px' : '0px 0px 0px 0px', threshold: window.innerWidth <= 768 ? 0.1 : 0.3 }
     );
 
     if (sectionRef.current) {
