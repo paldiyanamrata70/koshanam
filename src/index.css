@@ -1235,6 +1235,7 @@
   @media (max-width: 768px) {
     .faces {
       @apply py-[3rem];
+      background-image: url('/pictures/face of kosha.jpg');
       background-position: center 70%;
       background-size: 210%;
     }
