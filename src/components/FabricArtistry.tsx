@@ -264,8 +264,8 @@ const FabricArtistry = () => {
         }
         @media (max-width: 768px) {
           .fabric-title {
-            margin-top: -90px !important;
-            font-size: 1.2rem !important;
+            margin-top: -80px !important;
+            font-size: 1.5rem !important;
           }
         }
         .fabric-row::-webkit-scrollbar {
@@ -347,7 +347,7 @@ const FabricArtistry = () => {
           flexDirection: 'row',
           overflowX: 'auto',
           gap: '50px',
-          padding: isMobile ? '100px 50px 20px' : '40px 50px 20px',
+          padding: isMobile ? '120px 50px 20px' : '40px 50px 20px',
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
