@@ -314,79 +314,8 @@
 
   @media (max-width: 768px) {
     .story-stats {
-<<<<<<< HEAD
-      @apply text-[11px] mb-[20px] gap-[10px];
-    }
-
-    .story-stats strong {
-      @apply text-[13px];
-    }
-
-    .story-text {
-      @apply mt-0;
-    }
-  }
-  
-
-
-   /* .story-section {
-  @apply py-[clamp(3rem,8vw,5.625rem)] px-5 text-center;
-} */
-
-/* FIX: Remove negative margin & add safe spacing on mobile */
-/* @media (max-width: 768px) {
-  .story-section {
-    margin-top: 0 !important;
-    padding-top: 3.5rem !important;
-  }
-}
-
-.decorative-title {
-  @apply font-cinzel font-normal text-foreground;
-  font-size: clamp(1.6rem, 4vw, 2.625rem);
-  letter-spacing: 2px;
-  margin-bottom: 1.25rem; 
-}
-
-.story-text {
-  @apply max-w-[min(90vw,900px)] mx-auto text-center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.5;
-  letter-spacing: 0.035em;
-  color: inherit;
-  white-space: normal;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
-
-.story-stats {
-  @apply flex justify-center gap-[50px] text-[13px] text-foreground/70 tracking-[1px] mt-[20px];
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-}
-
-.story-stats strong {
-  @apply text-[15px];
-}
-
-@media (max-width: 768px) {
-  .story-stats {
-    @apply text-[11px] mb-[20px];
-  }
-
-  .story-stats strong {
-    @apply text-[13px];
-  }
-
-  .story-text {
-    @apply mt-0;
-    font-size: 15px;
-  }
-}  */
-=======
       @apply text-[9px] mb-[20px] gap-[10px];
-    }
+    
 
     .story-stats strong {
       @apply text-[11px];
@@ -398,8 +327,7 @@
       line-height: 1.2;
       max-width: min(85vw, 650px);
     }
-  }
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+  
 
 
 
@@ -412,15 +340,15 @@
   .reveal.active {
     @apply translate-y-0 opacity-100;
   }
-<<<<<<< HEAD
-=======
+HEAD
+
 
   @media (max-width: 768px) {
     .reveal {
       transition: all 0.8s ease-out;
     }
   }
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
   
   /* Divider Band */
   .divider-band {
@@ -474,10 +402,9 @@
       margin-top: 16vh !important;
       padding-top: 9vh !important;
       min-height: 70vh !important;
-<<<<<<< HEAD
-=======
+
       padding-bottom: 180px !important;
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
     }
 
     .extended-collection.animate-up {
@@ -648,11 +575,11 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-<<<<<<< HEAD
+
       margin-top: -70vh !important;
-=======
+
       margin-top: -82vh !important;
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
       height: 80vh !important;
     }
 
@@ -1202,17 +1129,17 @@
   /* Faces of Kosha */
   .faces {
     background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
-<<<<<<< HEAD
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     @apply py-[clamp(6rem,13vw,7rem)] px-5 text-center relative;
-=======
+
     background-size: 120% 120%;
     background-position: center;
     background-repeat: no-repeat;
     @apply py-[clamp(8rem,15vw,9rem)] px-5 text-center relative;
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
     margin-top: -2rem;
   }
 
@@ -1275,7 +1202,7 @@
 
   @media (max-width: 768px) {
     .faces {
-<<<<<<< HEAD
+
       @apply py-[2rem];
       background-position: center 40%;
       background-size: 100%;
@@ -1287,7 +1214,7 @@
 
     .faces-text {
       font-size: 14px;
-=======
+
       @apply py-[1rem];
       background-image: url('/pictures/face of kosha.jpg');
       background-position: center;
@@ -1297,7 +1224,7 @@
     .faces::before {
       background: linear-gradient(rgba(122,50,50,0.5));
       background-size: cover;
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
     }
   }
   
@@ -1479,11 +1406,11 @@
 
   .story-section {
     padding-top: 0 !important;
-<<<<<<< HEAD
+
     padding-bottom: 2rem !important;
-=======
+
     padding-bottom: 3rem !important;
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
   }
 
   .decorative-title {
@@ -1496,12 +1423,11 @@
   }
 
   .faces-text {
-<<<<<<< HEAD
+
     font-size: 8px;
-=======
     font-size: 7px;
     line-height: 1.4;
->>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
+
   }
 
   .journey-title {
