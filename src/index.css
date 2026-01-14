@@ -451,6 +451,7 @@
       margin-top: 16vh !important;
       padding-top: 9vh !important;
       min-height: 70vh !important;
+      padding-bottom: 180px !important;
     }
 
     .extended-collection.animate-up {
@@ -621,7 +622,7 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -70vh !important;
+      margin-top: -82vh !important;
       height: 80vh !important;
     }
 
@@ -1439,7 +1440,7 @@
   }
 
   .faces-text {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .journey-title {
