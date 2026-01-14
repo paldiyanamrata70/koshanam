@@ -94,8 +94,8 @@ I admire your design aesthetic and would love updates on new launches, collectio
       </div>
 
       <div className="footer-bottom">
-        Copyright © 2026 © Kosha | Terms of Use | Privacy Policy | FAQs | Pricing Policy | By
-        Namrata Paldiya
+        Copyright © 2026 © Kosha | Terms of Use | Privacy Policy | FAQs | Pricing Policy 
+       
       </div>
     </footer>
   );

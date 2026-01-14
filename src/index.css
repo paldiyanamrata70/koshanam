@@ -447,6 +447,7 @@
     .extended-collection {
       margin-top: 16vh !important;
       padding-top: 9vh !important;
+      min-height: 70vh !important;
     }
 
     .extended-collection.animate-up {
@@ -617,12 +618,12 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -80vh !important;
-      height: 70vh !important;
+      margin-top: -70vh !important;
+      height: 80vh !important;
     }
 
     .fabric-row {
-      transform: translateY(-75px);
+      transform: translateY(-25px);
     }
   }
 

@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const FabricArtistry = () => {
+  const isMobile = useIsMobile();
   const [isVisible, setIsVisible] = useState(false);
   const [showImages, setShowImages] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -167,13 +169,11 @@ const FabricArtistry = () => {
             width: clamp(300px, 50vw, 450px);
             height: clamp(400px, 55vw, 500px);
           }
-          .fabric-row {
-            padding-top: 120px;
-          }
           .fabric-section {
             position: sticky;
             top: 0;
             z-index: 15;
+            padding-top: 450px;
           }
           .simple-btn {
             padding: 8px 25px !important;
@@ -262,6 +262,12 @@ const FabricArtistry = () => {
           opacity: 1;
           transform: translateY(0);
         }
+        @media (max-width: 768px) {
+          .fabric-title {
+            margin-top: -90px !important;
+            font-size: 1.2rem !important;
+          }
+        }
         .fabric-row::-webkit-scrollbar {
           width: 8px;
         }
@@ -331,7 +337,7 @@ const FabricArtistry = () => {
           }
         }
       `}} />
-
+      {isMobile && <h2 className={`fabric-title ${isVisible ? 'animate' : ''}`}>explore fabric artisty</h2>}
       {/* 2. Scrollable Area: Moves independently of the title */}
       <div
         className="fabric-row"
@@ -341,7 +347,7 @@ const FabricArtistry = () => {
           flexDirection: 'row',
           overflowX: 'auto',
           gap: '50px',
-          padding: '40px 50px 20px',
+          padding: isMobile ? '100px 50px 20px' : '40px 50px 20px',
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}

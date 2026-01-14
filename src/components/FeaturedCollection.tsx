@@ -163,7 +163,7 @@ const FeaturedCollection = () => {
           </div>
         ))}
       </div>
-      <h2 className={`fabric-title ${isVisible ? 'animate' : ''}`}>Explore Fabric Artistry</h2>
+      <h2 className={`fabric-title hidden md:block ${isVisible ? 'animate' : ''}`}>Explore Fabric Artistry</h2>
       <div className="md:hidden flex flex-col items-center mt-4">
      </div>
     </section>
