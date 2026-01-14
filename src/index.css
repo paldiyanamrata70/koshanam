@@ -323,69 +323,11 @@
 
     .story-text {
       @apply mt-0 text-center;
-      font-size: 5px;
-      line-height: 1.4;
+      font-size: 4px;
+      line-height: 1.2;
       max-width: min(85vw, 650px);
     }
   }
-  
-
-
-   /* .story-section {
-  @apply py-[clamp(3rem,8vw,5.625rem)] px-5 text-center;
-} */
-
-/* FIX: Remove negative margin & add safe spacing on mobile */
-/* @media (max-width: 768px) {
-  .story-section {
-    margin-top: 0 !important;
-    padding-top: 3.5rem !important;
-  }
-}
-
-.decorative-title {
-  @apply font-cinzel font-normal text-foreground;
-  font-size: clamp(1.6rem, 4vw, 2.625rem);
-  letter-spacing: 2px;
-  margin-bottom: 1.25rem; 
-}
-
-.story-text {
-  @apply max-w-[min(90vw,900px)] mx-auto text-center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.5;
-  letter-spacing: 0.035em;
-  color: inherit;
-  white-space: normal;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
-
-.story-stats {
-  @apply flex justify-center gap-[50px] text-[13px] text-foreground/70 tracking-[1px] mt-[20px];
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-}
-
-.story-stats strong {
-  @apply text-[15px];
-}
-
-@media (max-width: 768px) {
-  .story-stats {
-    @apply text-[11px] mb-[20px];
-  }
-
-  .story-stats strong {
-    @apply text-[13px];
-  }
-
-  .story-text {
-    @apply mt-0;
-    font-size: 15px;
-  }
-}  */
 
 
 
@@ -1434,7 +1376,7 @@
 
   .story-section {
     padding-top: 0 !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 3rem !important;
   }
 
   .decorative-title {
@@ -1447,7 +1389,8 @@
   }
 
   .faces-text {
-    font-size: 10px;
+    font-size: 7px;
+    line-height: 1.4;
   }
 
   .journey-title {

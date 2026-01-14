@@ -56,8 +56,8 @@ const StorySection = () => {
     <section id="about" className="story-section" ref={sectionRef}>
       <h2 className="decorative-title md:text-center mb-[0.5px] md:mb-[35px] mt-4">Celebrating Kosha</h2>
       <div className={`story-text ${isVisible ? 'reveal active' : 'reveal'}`}>
-        <p>Kosha, The colours and patterns tell the stories weaving, flaunting a unique timelessness, is a modern clothing brand rooted in fine craftsmanship and thoughtful design.</p>
-        <p>Every piece is created with a deep respect for fabric artistry, blending traditional techniques with contemporary style to offer women clothing that feels elegant, expressive, and timeless. Kosha celebrates individuality through refined fashion made with passion and purpose.</p>
+        <p>Kosha is led by Krishna Mahadik, driven by a belief in slow, intentional fashion. The brand brings together skilled artisans and contemporary design to create handcrafted sarees and dresses with clarity and purpose.</p>
+        <p>Kosha also designs thoughtfully crafted western wear that carries the same philosophy of elegance and restraint. Each piece is made with respect for craft, attention to detail, and a quiet sense of timelessness rooted in India’s tradition.</p>
       </div>
       <div className={`story-stats ${isVisible ? 'reveal active' : 'reveal'}`}>
         {stats.map((stat) => (
