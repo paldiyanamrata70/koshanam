@@ -1123,7 +1123,7 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    @apply py-[clamp(6rem,13vw,7rem)] px-5 text-center relative;
+    @apply py-[clamp(8rem,15vw,9rem)] px-5 text-center relative;
     margin-top: -2rem;
   }
 
