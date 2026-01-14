@@ -314,6 +314,7 @@
 
   @media (max-width: 768px) {
     .story-stats {
+<<<<<<< HEAD
       @apply text-[11px] mb-[20px] gap-[10px];
     }
 
@@ -383,6 +384,22 @@
     font-size: 15px;
   }
 }  */
+=======
+      @apply text-[9px] mb-[20px] gap-[10px];
+    }
+
+    .story-stats strong {
+      @apply text-[11px];
+    }
+
+    .story-text {
+      @apply mt-0 text-center;
+      font-size: 4px;
+      line-height: 1.2;
+      max-width: min(85vw, 650px);
+    }
+  }
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
 
 
 
@@ -395,6 +412,15 @@
   .reveal.active {
     @apply translate-y-0 opacity-100;
   }
+<<<<<<< HEAD
+=======
+
+  @media (max-width: 768px) {
+    .reveal {
+      transition: all 0.8s ease-out;
+    }
+  }
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
   
   /* Divider Band */
   .divider-band {
@@ -448,6 +474,10 @@
       margin-top: 16vh !important;
       padding-top: 9vh !important;
       min-height: 70vh !important;
+<<<<<<< HEAD
+=======
+      padding-bottom: 180px !important;
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
     }
 
     .extended-collection.animate-up {
@@ -618,7 +648,11 @@
 
   @media (max-width: 768px) {
     .fabric-section {
+<<<<<<< HEAD
       margin-top: -70vh !important;
+=======
+      margin-top: -82vh !important;
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
       height: 80vh !important;
     }
 
@@ -1168,10 +1202,17 @@
   /* Faces of Kosha */
   .faces {
     background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
+<<<<<<< HEAD
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     @apply py-[clamp(6rem,13vw,7rem)] px-5 text-center relative;
+=======
+    background-size: 120% 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply py-[clamp(8rem,15vw,9rem)] px-5 text-center relative;
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
     margin-top: -2rem;
   }
 
@@ -1234,6 +1275,7 @@
 
   @media (max-width: 768px) {
     .faces {
+<<<<<<< HEAD
       @apply py-[2rem];
       background-position: center 40%;
       background-size: 100%;
@@ -1245,6 +1287,17 @@
 
     .faces-text {
       font-size: 14px;
+=======
+      @apply py-[1rem];
+      background-image: url('/pictures/face of kosha.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    .faces::before {
+      background: linear-gradient(rgba(122,50,50,0.5));
+      background-size: cover;
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
     }
   }
   
@@ -1426,7 +1479,11 @@
 
   .story-section {
     padding-top: 0 !important;
+<<<<<<< HEAD
     padding-bottom: 2rem !important;
+=======
+    padding-bottom: 3rem !important;
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
   }
 
   .decorative-title {
@@ -1439,7 +1496,12 @@
   }
 
   .faces-text {
+<<<<<<< HEAD
     font-size: 8px;
+=======
+    font-size: 7px;
+    line-height: 1.4;
+>>>>>>> e7216e74aacb33cb0e41780bcf80e07af7e4aa0f
   }
 
   .journey-title {
