@@ -396,7 +396,7 @@
       min-height: 67vh !important;
       position: relative;
       z-index: 20;
-      padding-bottom: 2rem !important;
+      padding-bottom: 2.5rem !important;
     }
 
     .extended-collection.animate-up {
@@ -567,8 +567,8 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -80vh !important;    /*80*/
-      height: 100vh !important;
+      margin-top: -88vh !important;    /*80*/
+      height: 103vh !important;
     } 
 
     .fabric-row {
@@ -583,9 +583,7 @@
     margin-top: 70px !important;
   }
 
-  .fabric-title.animate {
-    animation: titleZoom 1.5s ease forwards;
-  }
+ 
 
   @keyframes titleZoom {
     0% { transform: translateY(500px) scale(1); }
