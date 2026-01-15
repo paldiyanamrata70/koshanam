@@ -566,9 +566,9 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -85vh !important;    /*80*/
+      margin-top: -80vh !important;    /*80*/
       height: 102vh !important;
-    }
+    } 
 
     .fabric-row {
       transform: translateY(-25px);
