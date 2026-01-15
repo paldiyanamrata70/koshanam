@@ -392,10 +392,11 @@
   @media (max-width: 768px) {
     .extended-collection {
       margin-top: 14vh !important;
-      padding-top: 9vh !important;
-      min-height: 70vh !important;
+      padding-top: 7vh !important;
+      min-height: 67vh !important;
       position: relative;
       z-index: 20;
+      padding-bottom: 2rem !important;
     }
 
     .extended-collection.animate-up {
