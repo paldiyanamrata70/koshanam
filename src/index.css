@@ -1253,6 +1253,10 @@
     .footer-bottom {
       font-size: 11px;
     }
+
+    .footer-col p {
+      margin-bottom: 10px;
+    }
   }
   
   .social-icons {
