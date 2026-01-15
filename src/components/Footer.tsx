@@ -55,7 +55,7 @@ I admire your design aesthetic and would love updates on new launches, collectio
         </div>
 
         {/* Contact Us */}
-        <div className="footer-col text-left ml-24 md:ml-24">
+        <div className="footer-col text-left ml-19 md:ml-24">
           <h4>CONTACT US</h4>
           <p style={{fontSize: '14px'}}>
             <Phone className="inline-block w-4 h-4 mr-4" />
