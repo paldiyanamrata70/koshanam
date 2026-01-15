@@ -1438,6 +1438,7 @@
 
   .footer {
     @apply py-10 px-5;
+    font-size: 12px;
   }
 
   .footer-container {

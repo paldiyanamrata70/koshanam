@@ -264,8 +264,12 @@ const FabricArtistry = () => {
         }
         @media (max-width: 768px) {
           .fabric-title {
-            margin-top: -80px !important;
             font-size: 1.5rem !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
           }
         }
         .fabric-row::-webkit-scrollbar {

@@ -21,8 +21,8 @@ I admire your design aesthetic and would love updates on new launches, collectio
           <div className="footer-col w-1/2">
             <h4>STAY UPDATED</h4>
             <input type="tel" placeholder="Enter your mobile number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} className="subscribe-input bg-transparent border-b-2 border-white text-white px-3 py-2 mb-4 placeholder:text-white/70 w-3/4" />
-            <p className="mb-4 text-[10px]">*Kosha does not share data with any third parties*</p>
-            <button onClick={handleConnect} className="subscribe-btn -mt-5 py-4 px-12 font-bold text-lg">Connect with us</button>
+            <p className="mb-5" style={{fontSize: '11px'}}>*Kosha does not share data with any third parties*</p>
+            <button onClick={handleConnect} className="subscribe-btn py-4 px-12 font-bold text-sm" style={{marginTop: '-10px'}}>Connect with us</button>
           </div>
           <div className="footer-col w-1/2 ml-2">
             <h4>FOLLOW US</h4>
@@ -49,23 +49,23 @@ I admire your design aesthetic and would love updates on new launches, collectio
         {/* Desktop: Stay Updated */}
         <div className="footer-col hidden md:block ml-10">
           <h4>STAY UPDATED</h4>
-          <input type="tel" placeholder="Enter your mobile number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} className="subscribe-input bg-transparent border-b-2 border-white text-white px-3 py-2 mb-4 placeholder:text-white/70 w-3/4" />
-          <p className="mb-2 text-[10px] whitespace-nowrap">*Kosha does not share data with any third parties*</p>
-          <button onClick={handleConnect} className="subscribe-btn mt-10 py-2 px-6 md:py-3 md:px-10 font-bold text-lg">Connect with us</button>
+          <input type="tel" placeholder="Enter your mobile number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} className="subscribe-input bg-transparent border-b-2 border-white text-white px-3 py-2 mb-4 placeholder:text-white/70 w-full" />
+          <p className="mb-2 text-[9px] whitespace-nowrap">*Kosha does not share data with any third parties*</p>
+          <button onClick={handleConnect} className="subscribe-btn py-2 px-6 md:py-3 md:px-10 font-bold text-lg" style={{marginTop: '0px'}}>Connect with us</button>
         </div>
 
         {/* Contact Us */}
-        <div className="footer-col mx-auto md:ml-24">
+        <div className="footer-col text-left ml-20 md:ml-24">
           <h4>CONTACT US</h4>
-          <p>
+          <p style={{fontSize: '14px'}}>
             <Phone className="inline-block w-4 h-4 mr-4" />
             +91 7776061122
           </p>
-          <p>
+          <p style={{fontSize: '14px'}}>
             <Mail className="inline-block w-4 h-4 mr-4" />
             koshafabricartistry9@gmail.com
           </p>
-          <p className="address">
+          <p className="address" style={{fontSize: '14px'}}>
             <MapPin className="inline-block w-4 h-4 mr-4" />
             Lower ground floor, CS No. 20/3/5, 202,
             <br />
