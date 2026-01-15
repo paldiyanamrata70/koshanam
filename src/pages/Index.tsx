@@ -13,6 +13,7 @@ const ReviewsSection = lazy(() => import('@/components/ReviewsSection'));
 const WatchFinest = lazy(() => import('@/components/WatchFinest'));
 const ArtisanalExcellence = lazy(() => import('@/components/ArtisanalExcellence'));
 const FacesOfKosha = lazy(() => import('@/components/FacesOfKosha'));
+const FromLoomToLook = lazy(() => import('@/components/FromLoomToLook'));
 const MapSection = lazy(() => import('@/components/MapSection'));
 const Footer = lazy(() => import('@/components/Footer'));
 const WhatsAppButton = lazy(() => import('@/components/WhatsAppButton'));
@@ -58,6 +59,7 @@ const Index = () => {
           <WatchFinest />
           <ArtisanalExcellence />
           <FacesOfKosha />
+          <FromLoomToLook />
           <MapSection />
         </Suspense>
       </main>
