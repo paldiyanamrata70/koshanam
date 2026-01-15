@@ -173,7 +173,7 @@ const FabricArtistry = () => {
             position: sticky;
             top: 0;
             z-index: 15;
-            padding-top: 450px;
+            padding-top: 100px;
           }
           .simple-btn {
             padding: 8px 25px !important;
@@ -266,7 +266,7 @@ const FabricArtistry = () => {
           .fabric-title {
             font-size: 1.5rem !important;
             position: sticky;
-            top: 0;
+            top: -50px;
             left: 0;
             right: 0;
             z-index: 10;

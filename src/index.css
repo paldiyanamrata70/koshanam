@@ -394,6 +394,8 @@
       margin-top: 14vh !important;
       padding-top: 9vh !important;
       min-height: 70vh !important;
+      position: relative;
+      z-index: 20;
     }
 
     .extended-collection.animate-up {
@@ -554,7 +556,7 @@
   
   /* Fabric Artistry */
   .fabric-section {
-    margin-top: -580px;
+    margin-top: -590px;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -564,8 +566,8 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -70vh !important;
-      height: 110vh !important;
+      margin-top: -94vh !important;
+      height: 102vh !important;
     }
 
     .fabric-row {
