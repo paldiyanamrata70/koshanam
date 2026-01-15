@@ -565,7 +565,7 @@
   @media (max-width: 768px) {
     .fabric-section {
       margin-top: -70vh !important;
-      height: 80vh !important;
+      height: 110vh !important;
     }
 
     .fabric-row {

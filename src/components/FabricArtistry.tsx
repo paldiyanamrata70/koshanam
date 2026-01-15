@@ -137,7 +137,7 @@ const FabricArtistry = () => {
         overflowX: 'auto',
         overflowY: 'hidden',
         backgroundColor: 'rgb(252, 238, 232)',
-        height: '650px',
+        height: '750px',
         position: 'relative',
       }}
     >
@@ -265,7 +265,7 @@ const FabricArtistry = () => {
         @media (max-width: 768px) {
           .fabric-title {
             font-size: 1.5rem !important;
-            position: absolute;
+            position: sticky;
             top: 0;
             left: 0;
             right: 0;
@@ -351,7 +351,7 @@ const FabricArtistry = () => {
           flexDirection: 'row',
           overflowX: 'auto',
           gap: '50px',
-          padding: isMobile ? '120px 50px 20px' : '40px 50px 20px',
+          padding: isMobile ? '130px 50px 20px' : '50px 50px 20px',
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
