@@ -1183,8 +1183,8 @@
   @media (max-width: 768px) {
     .faces {
       @apply py-[3rem];
-      background-position: center 45%;
-      background-size: 130%;
+      background-position: center 48%;
+      background-size: 132%;
       margin-top: -38px;
     }
 
