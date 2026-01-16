@@ -68,6 +68,7 @@ const WatchFinest = () => {
                   playsInline
                   autoPlay
                   preload="metadata"
+                  controlsList="nodownload"
                   onLoad={() => console.log(`Video loaded: ${item.src}`)}
                   onError={(e) => console.error(`Video failed to load: ${item.src}`, e)}
                   onClick={() => {

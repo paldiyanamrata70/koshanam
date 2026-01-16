@@ -393,7 +393,7 @@
     .extended-collection {
       margin-top: 14vh !important;
       padding-top: 7vh !important;
-      min-height: 67vh !important;
+      min-height: 75vh !important;
       position: relative;
       z-index: 20;
       padding-bottom: 2.5rem !important;
@@ -435,7 +435,7 @@
   }
 
   .image-placeholder {
-    @apply w-[clamp(190px,25vw,278px)] h-[clamp(250px,30vw,350px)] relative overflow-hidden;
+    @apply w-[clamp(150px,20vw,278px)] h-[clamp(200px,25vw,350px)] relative overflow-hidden;
     background-color: rgb(252, 238, 232);
   }
   
@@ -686,7 +686,7 @@
   }
 
   .journey-video-box {
-    @apply w-[min(80vw,90%)] mx-auto mb-[60px] mt-[-30px] bg-black rounded-[40px] overflow-hidden;
+    @apply w-[min(80vw,90%)] mx-auto mb-[70px] mt-[8px] bg-black rounded-[40px] overflow-hidden;
     height: clamp(400px, 50vw, 670px);
   }
 
@@ -1189,7 +1189,7 @@
     }
 
     .faces-text {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .faces::before {
@@ -1709,6 +1709,7 @@
     font-size: 1.6rem;
     margin-bottom: 40px;
     line-height: 1.1;
+    margin-top: 20px;
   }
 
   .loom-slider-wrapper {
@@ -1763,6 +1764,6 @@
   }
 
   .loom-slide.is-active {
-    top: -20px;
+    top: 0px;
   }
 }
