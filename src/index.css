@@ -391,7 +391,7 @@
 
   @media (max-width: 768px) {
     .extended-collection {
-      margin-top: 14vh !important;
+      margin-top: 17vh !important;
       padding-top: 7vh !important;
       min-height: 75vh !important;
       position: relative;
@@ -580,7 +580,7 @@
     @apply font-cinzel font-normal text-foreground mt-0 mb-10;
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     transform: translateY(500px) scale(1);
-    margin-top: 70px !important;
+    margin-top: 75px !important;
   }
 
  
@@ -612,7 +612,7 @@
     scroll-snap-type: x mandatory;
     width: max-content;
     transition: transform 0.5s ease;
-    transform: translateY(-125px);
+    transform: translateY(-155px);
   }
 
   /* Mobile: center first image */
