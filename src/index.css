@@ -960,7 +960,7 @@
   
   /* Artisanal Excellence */
   .artisanal-section {
-    padding: clamp(2rem, 6vw, 3.5rem) clamp(1rem, 3vw, 1.25rem);
+    padding: clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 1.25rem);
     background: #fff;
     overflow: hidden;
     text-align: center;
@@ -1029,7 +1029,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-70px);
+    transform: translateY(-90px);
   }
 
   @media (max-width: 768px) {
@@ -1132,7 +1132,7 @@
   }
 
   .faces h2 {
-    @apply font-cinzel font-normal text-white mb-[25px];
+    @apply font-cinzel font-normal text-white mb-[0.5px] md:mb-[35px];
     font-size: clamp(1.5rem, 4vw, 2.625rem);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     position: relative;
@@ -1247,7 +1247,7 @@
   }
   
   .footer-bottom {
-   @apply text-center mt-10 text-sm;
+   @apply text-center mt-10 text-sm font-extralight;
   }
 
   @media (max-width: 768px) {
@@ -1607,13 +1607,19 @@
   text-align: center;
   font-family: "Cinzel Decorative", serif;
   font-size: 2.5rem;
-  margin-bottom: 70px;
+  margin-bottom: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .loom-title {
+    margin-bottom: 35px;
+  }
 }
 
 .loom-slider-wrapper {
   position: relative;
   width: 65%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   min-height: 600px;
 }
@@ -1624,7 +1630,7 @@
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.9s ease;
+  transition: opacity 0.3s ease;
 }
 
 .loom-slide.is-active {
@@ -1682,7 +1688,6 @@
   width: 100%;
   height: 580px;
   object-fit: cover;
-  border-radius: 28px;
 }
 
 /* ===============================
@@ -1749,6 +1754,5 @@
     width: 100%;
     height: 260px;
     object-fit: cover;
-    border-radius: 16px;
   }
 }

@@ -33,8 +33,8 @@ const JourneySection = () => {
 
   return (
     <>
-      <h2 id="journey" className="journey-title" style={{ marginTop: '3px', marginBottom: '50px' }}>Journey</h2>
-      <div className="journey-video-box mt-13 md:mt-0 mb-[38px] md:mb-10" ref={componentRef}>
+      <h2 id="journey" className="journey-title mb-[0.5px] md:mb-[35px]" style={{ marginTop: '3px' }}>Journey</h2>
+      <div className="journey-video-box mt-13 md:mt-0 mb-[35px] md:mb-[75px]" ref={componentRef}>
         <video muted loop playsInline poster="/pictures/home.jpg">
           <source src="/pictures/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.

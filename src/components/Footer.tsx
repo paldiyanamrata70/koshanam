@@ -50,7 +50,7 @@ I admire your design aesthetic and would love updates on new launches, collectio
         <div className="footer-col hidden md:block ml-10">
           <h4>STAY UPDATED</h4>
           <input type="tel" placeholder="Enter your mobile number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} className="subscribe-input bg-transparent border-b-2 border-white text-white px-3 py-2 mb-4 placeholder:text-white/70 w-11/12" />
-          <p className="mb-2 text-[9px] whitespace-nowrap">*Kosha does not share data with any third parties*</p>
+          <p className="mb-2 text-[9px] whitespace-nowrap font-extralight" style={{fontStretch: 'condensed'}}>*Kosha does not share data with any third parties*</p>
           <button onClick={handleConnect} className="subscribe-btn py-2 px-6 md:py-3 md:px-10 font-bold text-lg" style={{marginTop: '0px'}}>Connect with us</button>
         </div>
 
@@ -96,7 +96,7 @@ I admire your design aesthetic and would love updates on new launches, collectio
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="footer-bottom font-thin" style={{fontStretch: 'condensed'}}>
         Copyright © 2026 © Kosha | Terms of Use | Privacy Policy | FAQs | Pricing Policy
         <p className="text-center font-medium text-[15px] mt-1">By Synora Digitals</p>
       </div>

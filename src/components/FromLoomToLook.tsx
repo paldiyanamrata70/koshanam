@@ -6,7 +6,7 @@ const FromLoomToLook = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % 3);
-    }, 4000);
+    }, 2500);
     return () => clearInterval(timer);
   }, []);
 

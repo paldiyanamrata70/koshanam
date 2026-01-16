@@ -37,7 +37,7 @@ const ArtisanalExcellence = () => {
 
   return (
     <section className="artisanal-section">
-      <h2 style={{marginBottom: '38px'}}>Artisanal Excellence</h2>
+      <h2 className="m-0">Artisanal Excellence</h2>
       <div className="carousel-wrapper">
         {artisans.map((item, index) => {
           // Calculate the position relative to currentIndex for 4 positions: center, right, hidden, left
