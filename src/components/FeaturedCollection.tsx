@@ -16,7 +16,7 @@ const FeaturedCollection = () => {
 
   const collections = [
     {
-      image: '/pictures/dress material .png',
+      image: '/pictures/dress material.jpg',
       title: 'Dress Materials',
     },
     {
@@ -28,11 +28,11 @@ const FeaturedCollection = () => {
       title: 'Customize Outfits',
     },
     {
-      image: '/pictures/customize blouses.png',
+      image: '/pictures/customize blouses.jpg',
       title: 'Customize Blouses',
     },
     {
-      image: '/pictures/accessories.png',
+      image: '/pictures/accessories.jpg',
       title: 'Accessories',
     },
     {
