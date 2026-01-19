@@ -57,11 +57,20 @@ const HeroSection = () => {
       <div className="hero-overlay">
         <h2 className="hero-title">Celebrating Kosha</h2>
       </div>
+
       <div className="hero-center">
-        <a href="#collection" className="hero-btn">
-          Our Collection →
-        </a>
-      </div>
+  <button
+    className="hero-btn"
+    onClick={() => {
+      document
+        .getElementById("collection")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }}
+  >
+    Our Collection →
+  </button>
+</div>
+
     </section>
   );
 };

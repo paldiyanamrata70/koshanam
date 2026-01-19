@@ -96,10 +96,6 @@ const FeaturedCollection = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isVisible]);
 
-
-
-
-
   return (
     <section id="collection" className={`extended-collection ${isVisible ? 'animate-up' : ''}`} ref={sectionRef} style={{ transform: `translate3d(0, ${parallaxY}px, 0)`, marginBottom: '130px', willChange: 'transform' }}>
       <style dangerouslySetInnerHTML={{ __html: `
@@ -121,7 +117,7 @@ const FeaturedCollection = () => {
         }
         .fabric-title.animate {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(10);
         }
         .curved-img-mobile {
           width: 200px;
