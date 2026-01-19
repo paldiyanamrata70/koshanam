@@ -281,7 +281,7 @@
 
   @media (max-width: 768px) {
     .story-section {
-      @apply -mt-[14.25vh];
+      @apply -mt-[13.25vh];
     }
   }
 
