@@ -281,7 +281,7 @@
 
   @media (max-width: 768px) {
     .story-section {
-      @apply -mt-[11.25vh];
+      @apply -mt-[14.25vh];
     }
   }
 
@@ -344,7 +344,7 @@
   
   /* Divider Band */
   .divider-band {
-    @apply h-[70px] bg-accent -mt-5 flex items-center justify-center;
+    @apply h-[70px] bg-accent -mt-1 flex items-center justify-center;
   }
 
   @media (max-width: 768px) {
@@ -391,8 +391,8 @@
 
   @media (max-width: 768px) {
     .extended-collection {
-      margin-top: 17vh !important;
-      padding-top: 7vh !important;
+      margin-top: 18vh !important;
+      padding-top: 6.5vh !important;
       min-height: 75vh !important;
       position: relative;
       z-index: 20;
@@ -1114,7 +1114,7 @@
 
   /* Faces of Kosha */
   .faces {
-    background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.webp');
+    background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1385,7 +1385,7 @@
 
   .story-section {
     padding-top: 0 !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 1% !important;
   }
 
   .decorative-title {
