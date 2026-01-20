@@ -110,7 +110,7 @@
     @apply bg-background text-foreground font-libre overflow-x-hidden;
     width: 100%;
     max-width: 100vw;
-    cursor: url('/pictures/hangerrr.png') 16 16, auto;
+    cursor: var(--cursor-img) 16 16, auto;
   }
 
   img, video {
@@ -476,26 +476,26 @@
   /* Zoom for specific images in FeaturedCollection */
   .extended-item:nth-child(1) .collection-img { /* Dress Materials */
     transform: translateX(-20px) scale(1.2);
-    transition: transform 3s ease;
+    transition: transform 2s ease;
   }
 
   .extended-item:nth-child(1) .collection-img { /* Dress Materials */
-    transform: translateX(-20px) scale(1.2);
+    transform: translateX(-20px) scale(2.2);
     transition: transform 2.4s ease-in-out;
   }
 
   .extended-item:nth-child(2) .collection-img { /* Sarres */
-    transform: translateX(-20px) scale(1.2);
+    transform: translateX(-20px) scale(2.2);
     transition: transform 2.4s ease-in-out;
   }
 
   .extended-item:nth-child(3) .collection-img { /* Customize Outfits */
-    transform: translateX(-20px) scale(1.2);
+    transform: translateX(-20px) scale(2.2);
     transition: transform 2.4s ease-in-out;
   }
 
   .extended-item:nth-child(4) .collection-img { /* Customize Blouses */
-    transform: translateX(-20px) scale(1.2);
+    transform: translateX(-20px) scale(2.2);
     transition: transform 2.4s ease-in-out;
   }
 
@@ -1090,6 +1090,16 @@
     object-fit: cover;
   }
 
+  @media (max-width: 768px) {
+    .card {
+      width: clamp(120px, 18vw, 300px);
+    }
+
+    .card img {
+      height: clamp(120px, 18vw, 300px);
+    }
+  }
+
   .card-content {
     padding: clamp(1rem, 2vw, 1.25rem);
     background: white;
@@ -1114,7 +1124,7 @@
 
   /* Faces of Kosha */
   .faces {
-    background-image: url('/pictures/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478-4993-ba3f-7c7927977f14-Picsart-AiImageEnhancer.png');
+    background-image: var(--faces-bg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

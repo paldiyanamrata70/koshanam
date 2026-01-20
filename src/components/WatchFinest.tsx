@@ -1,4 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
+import video1 from '../assets/images/video1.mp4';
+import video2 from '../assets/images/video2.mp4';
+import video3 from '../assets/images/video3.mp4';
 
 const WatchFinest = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -7,9 +10,9 @@ const WatchFinest = () => {
   const [selectedVideo, setSelectedVideo] = useState('');
 
   const items = [
-    { type: 'video', src: '/pictures/video1.mp4' },
-    { type: 'video', src: '/pictures/video2.mp4' },
-    { type: 'video', src: '/pictures/video3.mp4' },
+    { type: 'video', src: video1 },
+    { type: 'video', src: video2 },
+    { type: 'video', src: video3 },
   ];
 
   const scroll = (direction: number) => {

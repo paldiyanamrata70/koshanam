@@ -1,23 +1,27 @@
 import { useState, useEffect } from 'react';
+import handEmbroidery2Img from '../assets/images/Hand embroidery (2).jpg';
+import stitchingImg from '../assets/images/Stitching.avif';
+import ariEmbroideryImg from '../assets/images/Ari embroidery...jpg';
+import handEmbroidery3Img from '../assets/images/Hand embroidery (3).jpg';
 
 // Component for the animated card carousel showcasing artisanal excellence
 const ArtisanalExcellence = () => {
   // Data for the 4 artisan cards, each with image and title
   const artisans = [
     {
-      image: '/pictures/Hand embroidery (2).jpg',
+      image: handEmbroidery2Img,
       title: 'Hand Embroidery'
     },
     {
-      image: '/pictures/Stitching.avif',
+      image: stitchingImg,
       title: 'Stitching'
     },
     {
-      image: '/pictures/Ari embroidery...jpg',
+      image: ariEmbroideryImg,
       title: 'Ari Embroidery'
     },
     {
-      image: '/pictures/Hand embroidery (3).jpg',
+      image: handEmbroidery3Img,
       title: 'Advanced Embroidery'
     },
   ];

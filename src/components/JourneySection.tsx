@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import videoSrc from '../assets/images/video.mp4';
 
 const JourneySection = () => {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -36,7 +37,7 @@ const JourneySection = () => {
       <h2 id="journey" className="journey-title mb-[40px] md:mb-[35px]" style={{ marginTop: '3px' }}>Journey</h2>
       <div className="journey-video-box mt-20 md:mt-0 mb-[35px] md:mb-[75px]" ref={componentRef}>
         <video muted loop playsInline controlsList="nodownload">
-          <source src="/pictures/video.mp4" type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

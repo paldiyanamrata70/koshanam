@@ -1,4 +1,11 @@
 import { useEffect, useState } from "react";
+import oneImg from '../assets/images/one.png';
+import twoImg from '../assets/images/two.jpg';
+import centerImg from '../assets/images/centerimage.jpeg';
+import RoneImg from '../assets/images/Rone.jpg';
+import RtwoImg from '../assets/images/Rtwo.png';
+import threeSlideImg from '../assets/images/threeslide.png';
+import twoSlideImg from '../assets/images/twoslide.png';
 
 const FromLoomToLook = () => {
   const [current, setCurrent] = useState(0);
@@ -19,29 +26,29 @@ const FromLoomToLook = () => {
         <div className={`loom-slide ${current === 0 ? "is-active" : ""}`}>
           <div className="loom-grid">
             <div className="loom-side">
-              <img src="/pictures/one.png" className="loom-small" />
-              <img src="/pictures/two.jpg" />
+              <img src={oneImg} className="loom-small" />
+              <img src={twoImg} />
             </div>
 
             <div className="loom-center">
-              <img src="/pictures/centerimage.jpeg" />
+              <img src={centerImg} />
             </div>
 
             <div className="loom-side">
-              <img src="/pictures/Rone.jpg" className="loom-small" />
-              <img src="/pictures/Rtwo.png" />
+              <img src={RoneImg} className="loom-small" />
+              <img src={RtwoImg} />
             </div>
           </div>
         </div>
 
         {/* Slide 2 */}
         <div className={`loom-slide ${current === 1 ? "is-active" : ""}`}>
-          <img src="/pictures/threeslide.png" className="loom-single" />
+          <img src={threeSlideImg} className="loom-single" />
         </div>
 
         {/* Slide 3 */}
         <div className={`loom-slide ${current === 2 ? "is-active" : ""}`}>
-          <img src="/pictures/twoslide.png" className="loom-single" />
+          <img src={twoSlideImg} className="loom-single" />
         </div>
       </div>
     </section>

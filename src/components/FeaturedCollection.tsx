@@ -5,19 +5,24 @@ import customizeOutfitsImg from '../assets/images/customize-outfits.jpg';
 import customizeBlousesImg from '../assets/images/customize-blouses.jpg';
 import accessoriesImg from '../assets/images/accessories.jpg';
 import handEmbroideryImg from '../assets/images/hand-embroidery.JPG';
-import fabric1Img from '../assets/images/fabric1.JPG';
-import fabric2Img from '../assets/images/fabric2.jpg';
-import fabric3Img from '../assets/images/fabric3.jpg';
-import fabric4Img from '../assets/images/fabric4.JPG';
-import fabric5Img from '../assets/images/fabric5.jpg';
-import fabric6Img from '../assets/images/fabric6.jpg';
-import fabric7Img from '../assets/images/fabric7.jpg';
-import fabric8Img from '../assets/images/fabric8.JPG';
-import fabric9Img from '../assets/images/fabric9.JPG';
-import fabric10Img from '../assets/images/fabric10.jpg';
-import fabric11Img from '../assets/images/fabric11.JPG';
-import fabric12Img from '../assets/images/fabric12.JPG';
+import fabric1Img from '/pictures/fabric1.JPG';
+import fabric2Img from '/pictures/fabric2.jpg';
+import fabric3Img from '/pictures/fabric3.jpg';
+import fabric4Img from '/pictures/fabric4.JPG';
+import fabric5Img from '/pictures/fabric5.jpg';
+import fabric6Img from '/pictures/fabric6.jpg';
+import fabric7Img from '/pictures/fabric7.jpg';
+import fabric8Img from '/pictures/fabric8.JPG';
+import fabric9Img from '/pictures/fabric9.JPG';
+import fabric10Img from '/pictures/fabric10.jpg';
+import fabric11Img from '/pictures/fabric11.JPG';
+import fabric12Img from '/pictures/fabric12.JPG';
 
+// '/pictures/fabric1.JPG', '/pictures/fabric2.jpg','/pictures/fabric3.jpg',
+//      '/pictures/fabric5.jpg','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
+//     '/pictures/fabric7.jpg', '/pictures/fabric9.JPG','/pictures/fabric11.JPG',
+//      '/pictures/fabric10.jpg', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
+     
 const FeaturedCollection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [titleAnimated, setTitleAnimated] = useState(false);
