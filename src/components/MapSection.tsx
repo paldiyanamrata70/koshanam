@@ -2,7 +2,7 @@ const MapSection = () => {
   return (
     <section className="map-section mt-10 md:mt-0 mb-10 md:mb-0 relative">
       <a
-        href="https://www.google.com/maps/dir//16.708118,74.247598"
+        href="https://www.google.com/maps/dir//Kosha,Kolhapur"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute inset-0 z-10"
