@@ -1,4 +1,22 @@
 import { useEffect, useState, useRef } from 'react';
+import dressMaterialImg from '../assets/images/dress-material.jpg';
+import sarresImg from '../assets/images/sarres.JPG';
+import customizeOutfitsImg from '../assets/images/customize-outfits.jpg';
+import customizeBlousesImg from '../assets/images/customize-blouses.jpg';
+import accessoriesImg from '../assets/images/accessories.jpg';
+import handEmbroideryImg from '../assets/images/hand-embroidery.JPG';
+import fabric1Img from '../assets/images/fabric1.JPG';
+import fabric2Img from '../assets/images/fabric2.jpg';
+import fabric3Img from '../assets/images/fabric3.jpg';
+import fabric4Img from '../assets/images/fabric4.JPG';
+import fabric5Img from '../assets/images/fabric5.jpg';
+import fabric6Img from '../assets/images/fabric6.jpg';
+import fabric7Img from '../assets/images/fabric7.jpg';
+import fabric8Img from '../assets/images/fabric8.JPG';
+import fabric9Img from '../assets/images/fabric9.JPG';
+import fabric10Img from '../assets/images/fabric10.jpg';
+import fabric11Img from '../assets/images/fabric11.JPG';
+import fabric12Img from '../assets/images/fabric12.JPG';
 
 const FeaturedCollection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,36 +34,36 @@ const FeaturedCollection = () => {
 
   const collections = [
     {
-      image: '/pictures/dress-material.jpg',
+      image: dressMaterialImg,
       title: 'Dress Materials',
     },
     {
-      image: '/pictures/sarres.JPG',
+      image: sarresImg,
       title: 'Sarres',
     },
     {
-      image: '/pictures/customize-outfits.jpg',
+      image: customizeOutfitsImg,
       title: 'Customize Outfits',
     },
     {
-      image: '/pictures/customize-blouses.jpg',
+      image: customizeBlousesImg,
       title: 'Customize Blouses',
     },
     {
-      image: '/pictures/accessories.jpg',
+      image: accessoriesImg,
       title: 'Accessories',
     },
     {
-      image: '/pictures/hand-embroidery.JPG',
+      image: handEmbroideryImg,
       title: 'Hand Embroider',
     },
   ];
 
   const fabrics = [
-    '/pictures/fabric1.JPG', '/pictures/fabric2.jpg','/pictures/fabric3.jpg',
-     '/pictures/fabric5.jpg','/pictures/fabric8.png' , '/pictures/fabric6.jpg',
-    '/pictures/fabric7.jpg', '/pictures/fabric9.JPG','/pictures/fabric11.JPG',
-     '/pictures/fabric10.JPG', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
+    fabric1Img, fabric2Img, fabric3Img,
+    fabric5Img, fabric8Img, fabric6Img,
+    fabric7Img, fabric9Img, fabric11Img,
+    fabric10Img, fabric4Img, fabric12Img,
   ];
 
   const buttonTexts = [
@@ -151,8 +169,9 @@ const FeaturedCollection = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className={`collection-img ${titleAnimated ? 'zoom-in' : ''}`}
+                className={`collection-img ${titleAnimated ? 'zoom-in' : ''} blur-sm`}
                 loading="lazy"
+                onLoad={(e) => e.currentTarget.classList.remove('blur-sm')}
               />
               <p className="image-text">{item.title}</p>
             </div>

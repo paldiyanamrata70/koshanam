@@ -1,21 +1,29 @@
 import { useState, useEffect } from 'react';
+import homeImg from '../assets/images/home.jpg';
+import blouseImg from '../assets/images/blouse.jpg';
+import kurtiesImg from '../assets/images/kurties.jpg';
+import sareeImg from '../assets/images/saree.jpg';
+import homeMobileImg from '../assets/images/home-mobileview.JPG';
+import blouseMobileImg from '../assets/images/blouse -mobileview.jpg';
+import kurtiesMobileImg from '../assets/images/kurties -mobileview.jpg';
+import sareeMobileImg from '../assets/images/saree-mobileview.jpg';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const slides = [
-    '/pictures/home.jpg',
-    '/pictures/blouse.jpg',
-    '/pictures/kurties.jpg',
-    '/pictures/saree.jpg',
+    homeImg,
+    blouseImg,
+    kurtiesImg,
+    sareeImg,
   ];
 
   const mobileSlides = [
-    encodeURI('/pictures/home-mobileview.JPG'),
-    encodeURI('/pictures/blouse -mobileview.jpg'),
-    encodeURI('/pictures/kurties -mobileview.jpg'),
-    encodeURI('/pictures/saree-mobileview.jpg'),
+    homeMobileImg,
+    blouseMobileImg,
+    kurtiesMobileImg,
+    sareeMobileImg,
   ];
 
   useEffect(() => {

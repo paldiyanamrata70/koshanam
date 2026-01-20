@@ -442,7 +442,7 @@
   .collection-img {
     @apply w-full h-full object-cover;
     filter: brightness(1.1);
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: transform 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: grab;
     border: none;
@@ -475,27 +475,27 @@
 
   /* Zoom for specific images in FeaturedCollection */
   .extended-item:nth-child(1) .collection-img { /* Dress Materials */
-    transform: translateX(-20px) scale(2.2);
+    transform: translateX(-20px) scale(1.2);
     transition: transform 3s ease;
   }
 
   .extended-item:nth-child(1) .collection-img { /* Dress Materials */
-    transform: translateX(-20px) scale(2.2);
+    transform: translateX(-20px) scale(1.2);
     transition: transform 2.4s ease-in-out;
   }
 
   .extended-item:nth-child(2) .collection-img { /* Sarres */
-    transform: translateX(-20px) scale(2.2);
+    transform: translateX(-20px) scale(1.2);
     transition: transform 2.4s ease-in-out;
   }
 
   .extended-item:nth-child(3) .collection-img { /* Customize Outfits */
-    transform: translateX(-20px) scale(2.1);
+    transform: translateX(-20px) scale(1.2);
     transition: transform 2.4s ease-in-out;
   }
 
   .extended-item:nth-child(4) .collection-img { /* Customize Blouses */
-    transform: translateX(-20px) scale(2.2);
+    transform: translateX(-20px) scale(1.2);
     transition: transform 2.4s ease-in-out;
   }
 
