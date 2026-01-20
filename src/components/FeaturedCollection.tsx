@@ -36,7 +36,7 @@ const FeaturedCollection = () => {
       title: 'Accessories',
     },
     {
-      image: '/pictures/Hand embroidery.JPG',
+      image: '/pictures/hand-embroidery.JPG',
       title: 'Hand Embroider',
     },
   ];
