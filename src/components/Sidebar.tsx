@@ -23,7 +23,9 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
     } else {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        window.scrollTo({ top: (element as HTMLElement).offsetTop - headerHeight, behavior: 'smooth' });
       }
     }
     onClose();
