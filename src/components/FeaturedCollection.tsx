@@ -143,7 +143,7 @@ const FeaturedCollection = () => {
           color: white;
         }
       `}} />
-      <h2 className="decorative-title mb-[30px] md:mb-[45px] mt-0">Featured Collection</h2>
+      <h2 className="decorative-title mb-[27px] md:mb-[45px] mt-0">Featured Collection</h2>
       <div className="extended-grid">
         {collections.map((item, index) => (
           <div key={index} className="extended-item">
