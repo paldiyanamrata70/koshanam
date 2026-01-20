@@ -16,7 +16,7 @@ const FabricArtistry = () => {
 
   const fabrics = [
     '/pictures/fabric1.JPG', '/pictures/fabric2.jpg','/pictures/fabric3.jpg',
-     '/pictures/fabric5.jpg','/pictures/fabric8.png' , '/pictures/fabric6.jpg',
+     '/pictures/fabric5.jpg','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
     '/pictures/fabric7.jpg', '/pictures/fabric9.jpg','/pictures/fabric11.JPG',
      '/pictures/fabric10.jpg', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
   ];
