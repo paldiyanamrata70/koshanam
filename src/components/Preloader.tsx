@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../assets/images/home.jpg';
+import logoImg from '../assets/images/home-mobileview.jpg';
 
 const Preloader: React.FC = () => {
   return (

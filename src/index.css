@@ -110,7 +110,7 @@
     @apply bg-background text-foreground font-libre overflow-x-hidden;
     width: 100%;
     max-width: 100vw;
-    cursor: var(--cursor-img) 16 16, auto;
+    cursor: auto;
   }
 
   img, video {
@@ -572,7 +572,7 @@
     }
 
     /* Zoom for home image in WatchFinest */
-    .watch-finest img[src*="home.jpg"] {
+    .watch-finest img[src*="home-mobileview.jpg"] {
       transform: scale(2.5);
       transition: transform 4s ease;
     }
@@ -1083,7 +1083,7 @@
 
   @media (max-width: 768px) {
     .carousel-wrapper {
-      transform: translateY(-75px);
+      transform: translateY(-85px);
     }
   }
 
