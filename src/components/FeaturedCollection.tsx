@@ -5,18 +5,19 @@ import customizeOutfitsImg from '../assets/images/customize-outfits.jpg';
 import customizeBlousesImg from '../assets/images/customize-blouses.jpg';
 import accessoriesImg from '../assets/images/accessories.jpg';
 import handEmbroideryImg from '../assets/images/hand-embroidery.JPG';
-import fabric1Img from '/pictures/fabric1.JPG';
-import fabric2Img from '/pictures/fabric2.JPG';
-import fabric3Img from '/pictures/fabric3.JPG';
-import fabric4Img from '/pictures/fabric4.JPG';
-import fabric5Img from '/pictures/fabric5.JPG';
-import fabric6Img from '/pictures/fabric6.JPG';
-import fabric7Img from '/pictures/fabric7.JPG';
-import fabric8Img from '/pictures/fabric8.JPG';
-import fabric9Img from '/pictures/fabric9.JPG';
-import fabric10Img from '/pictures/fabric10.JPG';
-import fabric11Img from '/pictures/fabric11.JPG';
-import fabric12Img from '/pictures/fabric12.JPG';
+
+const fabric1Img = '/pictures/fabric1.JPG';
+const fabric2Img = '/pictures/fabric2.JPG';
+const fabric3Img = '/pictures/fabric3.JPG';
+const fabric4Img = '/pictures/fabric4.JPG';
+const fabric5Img = '/pictures/fabric5.JPG';
+const fabric6Img = '/pictures/fabric6.JPG';
+const fabric7Img = '/pictures/fabric7.JPG';
+const fabric8Img = '/pictures/fabric8.JPG';
+const fabric9Img = '/pictures/fabric9.JPG';
+const fabric10Img = '/pictures/fabric10.JPG';
+const fabric11Img = '/pictures/fabric11.JPG';
+const fabric12Img = '/pictures/fabric12.JPG';
 
 // '/pictures/fabric1.JPG', '/pictures/fabric2.jpg','/pictures/fabric3.jpg',
 //      '/pictures/fabric5.jpg','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',

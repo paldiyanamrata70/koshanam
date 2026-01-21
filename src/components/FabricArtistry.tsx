@@ -1,17 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
-import fabric1 from '/pictures/fabric1.JPG';
-import fabric2 from '/pictures/fabric2.JPG';
-import fabric3 from '/pictures/fabric3.JPG';
-import fabric4 from '/pictures/fabric4.JPG';
-import fabric5 from '/pictures/fabric5.JPG';
-import fabric6 from '/pictures/fabric6.JPG';
-import fabric7 from '/pictures/fabric7.JPG';
-import fabric8 from '/pictures/fabric8.JPG';
-import fabric9 from '/pictures/fabric9.JPG';
-import fabric10 from '/pictures/fabric10.JPG';
-import fabric11 from '/pictures/fabric11.JPG';
-import fabric12 from '/pictures/fabric12.JPG';
+
+const fabric1 = '/pictures/fabric1.JPG';
+const fabric2 = '/pictures/fabric2.JPG';
+const fabric3 = '/pictures/fabric3.JPG';
+const fabric4 = '/pictures/fabric4.JPG';
+const fabric5 = '/pictures/fabric5.JPG';
+const fabric6 = '/pictures/fabric6.JPG';
+const fabric7 = '/pictures/fabric7.JPG';
+const fabric8 = '/pictures/fabric8.JPG';
+const fabric9 = '/pictures/fabric9.JPG';
+const fabric10 = '/pictures/fabric10.JPG';
+const fabric11 = '/pictures/fabric11.JPG';
+const fabric12 = '/pictures/fabric12.JPG';
 
 const FabricArtistry = () => {
   const isMobile = useIsMobile();
