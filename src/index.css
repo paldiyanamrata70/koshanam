@@ -1778,7 +1778,12 @@
 /* Other side images */
 .loom-side img:not(.loom-small) {
   height: 290px;
-  width: 240px;
+}
+
+@media (min-width: 769px) {
+  .loom-side img:not(.loom-small) {
+    width: 240px;
+  }
 }
 
 /* Center image – slightly narrower so it visually fits closer */
