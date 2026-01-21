@@ -1153,27 +1153,27 @@
 
   @media (max-width: 768px) {
     .card-container.center {
-      transform: translateX(0) scale(0.8);
+      transform: translateX(0) scale(0.6);
     }
 
     .card-container.left {
-      transform: translateX(-18vw) scale(0.6);
+      transform: translateX(-18vw) scale(0.5);
     }
 
     .card-container.right {
-      transform: translateX(18vw) scale(0.6);
+      transform: translateX(18vw) scale(0.5);
     }
 
     .card-container.hidden {
-      transform: translateX(25vw) scale(0.4);
+      transform: translateX(25vw) scale(0.3);
     }
 
     .card {
-      width: clamp(80px, 12vw, 150px);
+      width: clamp(60px, 10vw, 120px);
     }
 
     .card img {
-      height: clamp(100px, 15vw, 200px);
+      height: clamp(80px, 12vw, 150px);
     }
   }
 
