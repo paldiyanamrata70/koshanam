@@ -1780,12 +1780,6 @@
   height: 290px;
 }
 
-@media (min-width: 769px) {
-  .loom-side img:not(.loom-small) {
-    width: 240px;
-  }
-}
-
 /* Center image – slightly narrower so it visually fits closer */
 .loom-center img {
   max-width: 320px; /* ceneter img width chnages  */
