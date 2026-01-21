@@ -92,7 +92,7 @@ const FeaturedCollection = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            setTimeout(() => setTitleAnimated(true), 1000);
+            setTimeout(() => setTitleAnimated(true), 500);
           }
         });
       },
