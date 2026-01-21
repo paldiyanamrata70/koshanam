@@ -1770,20 +1770,16 @@
   border-radius: 8px;
 }
 
-/* 🔥 Increase size ONLY for one.png & Rone.jpg */
-.loom-small {
-  height: 290px; /* increased as per your previous request */
-}
-
-/* Other side images */
-.loom-side img:not(.loom-small) {
+/* All loom images same size */
+.loom-grid img {
+  width: 200px;
   height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* Center image – slightly narrower so it visually fits closer */
+/* Center image */
 .loom-center img {
-  max-width: 320px; /* ceneter img width chnages  */
-  height: 420px;
   border-radius: 18px;
 }
 
