@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 import fabric1 from '/pictures/fabric1.JPG';
-import fabric2 from '/pictures/fabric2.jpg';
-import fabric3 from '/pictures/fabric3.jpg';
+import fabric2 from '/pictures/fabric2.JPG';
+import fabric3 from '/pictures/fabric3.JPG';
 import fabric4 from '/pictures/fabric4.JPG';
-import fabric5 from '/pictures/fabric5.jpg';
-import fabric6 from '/pictures/fabric6.jpg';
-import fabric7 from '/pictures/fabric7.jpg';
+import fabric5 from '/pictures/fabric5.JPG';
+import fabric6 from '/pictures/fabric6.JPG';
+import fabric7 from '/pictures/fabric7.JPG';
 import fabric8 from '/pictures/fabric8.JPG';
 import fabric9 from '/pictures/fabric9.JPG';
-import fabric10 from '/pictures/fabric10.jpg';
+import fabric10 from '/pictures/fabric10.JPG';
 import fabric11 from '/pictures/fabric11.JPG';
 import fabric12 from '/pictures/fabric12.JPG';
 
