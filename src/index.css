@@ -1840,9 +1840,10 @@
     border-radius: 8px;
   }
 
-  /* Decrease height for specific images */
+  /* Decrease size for specific images */
   .loom-mobile-small {
-    height: 50px; /* smaller height for mobile */
+    width: 10px;
+    height: 10px;
   }
 
   /* Center image */
