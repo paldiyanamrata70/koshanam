@@ -1843,7 +1843,7 @@
   /* Decrease height for specific images */
   .loom-side img[src*="two.jpg"],
   .loom-side img[src*="Rtwo.png"] {
-    height: 120px; /* smaller height for mobile */
+    height: 80px; /* smaller height for mobile */
   }
 
   /* Center image */
