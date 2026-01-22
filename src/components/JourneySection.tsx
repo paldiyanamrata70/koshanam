@@ -1,6 +1,5 @@
 import { useRef, useEffect } from 'react';
-
-const videoSrc = '/images/video.mp4';
+import videoSrc from '../assets/images/video.mp4';
 
 const JourneySection = () => {
   const componentRef = useRef<HTMLDivElement>(null);

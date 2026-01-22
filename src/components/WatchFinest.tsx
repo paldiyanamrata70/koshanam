@@ -1,8 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
-
-const video1 = '/images/video1.mp4';
-const video2 = '/images/video2.mp4';
-const video3 = '/images/video3.mp4';
+import video1 from '../assets/images/video1.mp4';
+import video2 from '../assets/images/video2.mp4';
+import video3 from '../assets/images/video3.mp4';
 
 const WatchFinest = () => {
   const scrollRef = useRef<HTMLDivElement>(null);

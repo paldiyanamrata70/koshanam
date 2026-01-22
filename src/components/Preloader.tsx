@@ -1,6 +1,5 @@
 import React from 'react';
-
-const logoImg = '/images/home-mobileview.jpg';
+import logoImg from '../assets/images/home-mobileview.jpg';
 
 const Preloader: React.FC = () => {
   return (

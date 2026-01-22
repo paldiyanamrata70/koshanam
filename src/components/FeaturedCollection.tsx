@@ -1,11 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
-
-const dressMaterialImg = '/images/dress-material.jpg';
-const sarresImg = '/images/sarres.JPG';
-const customizeOutfitsImg = '/images/customize-outfits.jpg';
-const customizeBlousesImg = '/images/customize-blouses.jpg';
-const accessoriesImg = '/images/accessories.jpg';
-const handEmbroideryImg = '/images/hand-embroidery.JPG';
+import dressMaterialImg from '../assets/images/dress-material.jpg';
+import sarresImg from '../assets/images/sarres.JPG';
+import customizeOutfitsImg from '../assets/images/customize-outfits.jpg';
+import customizeBlousesImg from '../assets/images/customize-blouses.jpg';
+import accessoriesImg from '../assets/images/accessories.jpg';
+import handEmbroideryImg from '../assets/images/hand-embroidery.JPG';
 
 const fabric1Img = '/pictures/fabric1.JPG';
 const fabric2Img = '/pictures/fabric2.JPG';

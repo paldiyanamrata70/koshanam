@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-
-const handEmbroidery2Img = '/images/Hand embroidery (2).jpg';
-const stitchingImg = '/images/Stitching.avif';
-const ariEmbroideryImg = '/images/Ari embroidery...jpg';
-const handEmbroidery3Img = '/images/Hand embroidery (3).jpg';
+import handEmbroidery2Img from '../assets/images/Hand embroidery (2).jpg';
+import stitchingImg from '../assets/images/Stitching.avif';
+import ariEmbroideryImg from '../assets/images/Ari embroidery...jpg';
+import handEmbroidery3Img from '../assets/images/Hand embroidery (3).jpg';
 
 // Component for the animated card carousel showcasing artisanal excellence
 const ArtisanalExcellence = () => {
