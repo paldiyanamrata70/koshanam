@@ -56,8 +56,7 @@ const StorySection = () => {
     <section id="about" className="story-section" ref={sectionRef}>
       <h2 className="decorative-title md:text-center mb-[20px] md:mb-[35px] mt-4">Celebrating Kosha</h2>
       <div className={`story-text ${isVisible ? 'reveal active' : 'reveal'}`}>
-        Kosha, The colours and patterns tell the stories weaving, flaunting a unique timelessness, is a modern clothing brand rooted in fine craftsmanship and thoughtful design.
-        Every piece is created with a deep respect for fabric artistry, blending traditional techniques with contemporary style to offer women clothing that feels elegant, expressive, and timeless. Kosha celebrates individuality through refined fashion made with passion and purpose.
+        Our collection celebrates Kosha, a modern clothing brand rooted in fine craftsmanship and thoughtful design.  The vibrant colours and intricate patterns tell stories of weaving and flaunting a unique timelessness.  Each piece is crafted with deep respect for fabric artistry, blending traditional techniques with contemporary style to create elegant, expressive, and timeless clothing for women. Kosha celebrates individuality through refined fashion made with passion and purpose.
       </div>
       <div className={`story-stats md:mb-14 md:mt-[32px] ${isVisible ? 'reveal active' : 'reveal'}`}>
         {stats.map((stat) => (

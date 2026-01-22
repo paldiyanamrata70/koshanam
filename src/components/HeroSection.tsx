@@ -3,7 +3,7 @@ import homeImg from '../assets/images/home-mobileview.jpg';
 import blouseImg from '../assets/images/blouse.jpg';
 import kurtiesImg from '../assets/images/kurties.jpg';
 import sareeImg from '../assets/images/saree.jpg';
-import homeMobileImg from '../assets/images/home-mobileview.JPG';
+import homeMobileImg from '../assets/images/home-mobileview.jpg';
 import blouseMobileImg from '../assets/images/blouse -mobileview.jpg';
 import kurtiesMobileImg from '../assets/images/kurties -mobileview.jpg';
 import sareeMobileImg from '../assets/images/saree.jpg';

@@ -602,7 +602,7 @@
 
   @media (max-width: 768px) {
     .fabric-section {
-      margin-top: -88vh !important;    /*80*/
+      margin-top: -87vh !important;    /*80*/
       height: 103vh !important;
     } 
 

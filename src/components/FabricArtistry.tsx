@@ -363,7 +363,7 @@ const FabricArtistry = () => {
           display: 'flex',
           flexDirection: 'row',
           overflowX: 'auto',
-          gap: '50px',
+          gap: '40px',
           padding: isMobile ? '148px 15px 20px 20px' : '50px 50px 20px',
         }}
         onTouchStart={handleTouchStart}
