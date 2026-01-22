@@ -1842,7 +1842,7 @@
 
   /* Decrease height for specific images */
   .loom-mobile-small {
-    height: 80px; /* smaller height for mobile */
+    height: 50px; /* smaller height for mobile */
   }
 
   /* Center image */
