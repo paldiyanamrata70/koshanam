@@ -27,7 +27,7 @@ const FromLoomToLook = () => {
           <div className="loom-grid">
             <div className="loom-side">
               <img src={oneImg} className="loom-small" />
-              <img src={twoImg} className="loom-mobile-small" />
+              <img src={twoImg} />
             </div>
 
             <div className="loom-center">
@@ -36,7 +36,7 @@ const FromLoomToLook = () => {
 
             <div className="loom-side">
               <img src={RoneImg} className="loom-small" />
-              <img src={RtwoImg} className="loom-mobile-small" />
+              <img src={RtwoImg} />
             </div>
           </div>
         </div>

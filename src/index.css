@@ -1840,10 +1840,10 @@
     border-radius: 8px;
   }
 
-  /* Decrease size for specific images */
-  .loom-mobile-small {
-    width: 10px;
-    height: 10px;
+  /* Decrease height for specific images */
+  .loom-side img[src*="two.jpg"],
+  .loom-side img[src*="Rtwo.png"] {
+    height: 80px; /* smaller height for mobile */
   }
 
   /* Center image */
