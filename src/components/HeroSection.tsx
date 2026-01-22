@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import homeImg from '../assets/images/home-mobileview.jpg';
-import blouseImg from '../assets/images/blouse.jpg';
-import kurtiesImg from '../assets/images/kurties.jpg';
-import sareeImg from '../assets/images/saree.jpg';
-import homeMobileImg from '../assets/images/home-mobileview.jpg';
-import blouseMobileImg from '../assets/images/blouse -mobileview.jpg';
-import kurtiesMobileImg from '../assets/images/kurties -mobileview.jpg';
-import sareeMobileImg from '../assets/images/saree.jpg';
+
+const homeImg = '/images/home-mobileview.jpg';
+const blouseImg = '/images/blouse.jpg';
+const kurtiesImg = '/images/kurties.jpg';
+const sareeImg = '/images/saree.jpg';
+const homeMobileImg = '/images/home-mobileview.jpg';
+const blouseMobileImg = '/images/blouse -mobileview.jpg';
+const kurtiesMobileImg = '/images/kurties -mobileview.jpg';
+const sareeMobileImg = '/images/saree.jpg';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import oneImg from '../assets/images/one.png';
-import twoImg from '../assets/images/two.jpg';
-import centerImg from '../assets/images/centerimage.jpeg';
-import RoneImg from '../assets/images/Rone.jpg';
-import RtwoImg from '../assets/images/Rtwo.png';
-import threeSlideImg from '../assets/images/threeslide.png';
-import twoSlideImg from '../assets/images/twoslide.png';
+
+const oneImg = '/images/one.png';
+const twoImg = '/images/two.jpg';
+const centerImg = '/images/centerimage.jpeg';
+const RoneImg = '/images/Rone.jpg';
+const RtwoImg = '/images/Rtwo.png';
+const threeSlideImg = '/images/threeslide.png';
+const twoSlideImg = '/images/twoslide.png';
 
 const FromLoomToLook = () => {
   const [current, setCurrent] = useState(0);
