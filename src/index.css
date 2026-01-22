@@ -1843,6 +1843,7 @@
   /* Decrease height for specific images */
   .loom-side img.small-height {
     height: 160px; /* smaller height for mobile */
+    max-width: 160px;
   }
 
   /* Center image */

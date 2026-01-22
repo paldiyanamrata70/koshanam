@@ -29,7 +29,7 @@ const FabricArtistry = () => {
 
   const fabrics = [
     fabric1, fabric2, fabric3,
-    fabric5, fabric8, fabric6,
+    fabric5, fabric8, fabric7,
     fabric7, fabric9, fabric11,
     fabric10, fabric4, fabric12,
   ];
