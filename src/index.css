@@ -1776,8 +1776,13 @@
 }
 
 /* Other side images */
-.loom-side img:not(.loom-small) {
+.loom-side img:not(.loom-small):not(.small-height) {
   height: 290px;
+}
+
+/* Smaller height for specific images */
+.loom-side img.small-height {
+  height: 160px;
 }
 
 /* Center image – slightly narrower so it visually fits closer */
