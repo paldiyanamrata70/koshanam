@@ -1820,7 +1820,7 @@
   .loom-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
@@ -1843,7 +1843,7 @@
   /* Decrease height for specific images */
   .loom-side img[src*="two.jpg"],
   .loom-side img[src*="Rtwo.png"] {
-    height: 80px; /* smaller height for mobile */
+    height: 160px; /* smaller height for mobile */
   }
 
   /* Center image */
@@ -1857,7 +1857,7 @@
   /* Single-image slides (slide 2 & 3) */
   .loom-single {
     width: 100%;
-    height: 260px;
+    height: 280px;
     object-fit: cover;
   }
 
