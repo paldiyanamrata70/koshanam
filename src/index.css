@@ -802,6 +802,10 @@
       width: clamp(300px, 80vw, 370px);
       height: clamp(420px, 100vw, 570px);
     }
+
+    .watch-title {
+      @apply mb-[20px];
+    }
   }
 
   @media (max-width: 375px) {
@@ -1017,7 +1021,7 @@
 
   @media (max-width: 768px) {
     .artisanal-section {
-      margin-bottom: -95px;
+      margin-bottom: -100px;
     }
   }
 
@@ -1083,7 +1087,7 @@
 
   @media (max-width: 768px) {
     .carousel-wrapper {
-      transform: translateY(-85px);
+      transform: translateY(-70px);
     }
   }
 
@@ -1533,11 +1537,11 @@
   }
 
   .watch-finest {
-   @apply pt-[70px] pb-4;
+   @apply pt-[60px] pb-4;
  }
 
   .watch-title {
-   @apply mt-2 mb-2;
+   @apply mt-2 mb-[36px];
  }
 
   .watch-images-row {
