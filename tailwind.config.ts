@@ -17,7 +17,6 @@ export default {
       fontFamily: {
         cinzel: ['"Cinzel Decorative"', 'serif'],
         libre: ['"Libre Baskerville"', 'serif'],
-        doppelganger: ["Doppelganger", "serif"],
         josefin: ['"Josefin Sans"', 'sans-serif'],
       },
       colors: {
