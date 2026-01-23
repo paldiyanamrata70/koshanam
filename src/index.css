@@ -392,7 +392,7 @@
   @media (max-width: 768px) {
     .extended-collection {
       margin-top: 18vh !important;
-      padding-top: 6.5vh !important;
+      padding-top: 6.8vh !important;
       min-height: 75vh !important;
       position: relative;
       z-index: 20;
@@ -805,6 +805,23 @@
 
     .watch-title {
       @apply mb-[20px];
+    }
+
+    .decorative-title {
+      margin-bottom: 28px;
+    }
+
+    .story-stats {
+      margin-bottom: 3.5rem;
+      margin-top: 2rem;
+    }
+
+    .extended-collection {
+      margin-bottom: 130px;
+    }
+
+    .fabric-title {
+      margin-bottom: 40px;
     }
   }
 
