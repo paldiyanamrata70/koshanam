@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     ViteImageOptimizer({
-      include: ['**/*.{png,jpg,jpeg,webp,avif}'],
+      include: ['**/*.{png,jpg,JPG,jpeg,webp,avif}'],
       exclude: ['node_modules/**'],
     }),
     mode === "development" && componentTagger()
