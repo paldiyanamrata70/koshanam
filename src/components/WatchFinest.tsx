@@ -52,7 +52,7 @@ const WatchFinest = () => {
   }, []);
 
   return (
-    <div id="finest-film" className="watch-finest mb-[38px]" ref={componentRef} style={{ marginTop: window.innerWidth <= 768 ? '-30px' : '-10px' }}>
+    <div id="finest-film" className="watch-finest mb-[20px] md:mb-[38px]" ref={componentRef} style={{ marginTop: window.innerWidth <= 768 ? '-10px' : '-10px' }}>
       <h2 className="watch-title md:mb-[35px]">Watch Finest</h2>
       <div className="scroll-wrapper">
         <button className="finest-scroll-btn left" onClick={() => scroll(-1)}>
