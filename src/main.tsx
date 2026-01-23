@@ -6,10 +6,10 @@ import sareeImg from './assets/images/Balaram_Saha_Dhonekali_Saree_63ad7d5a-2478
 // Set CSS custom properties for images
 document.documentElement.style.setProperty('--faces-bg', `url(${sareeImg})`);
 
-// Disable right-click context menu
-// document.addEventListener('contextmenu', (e) => {
-//   e.preventDefault();
-// });
+//Disable right-click context menu
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+});
 
 createRoot(document.getElementById("root")!).render(<App />);
 
