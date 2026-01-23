@@ -353,6 +353,11 @@ const FabricArtistry = () => {
             font-size: 20px;
           }
         }
+        @media (min-width: 769px) {
+          .fabric-section {
+            height: 670px !important;
+          }
+        }
       `}} />
       {isMobile && <h2 className={`fabric-title ${isVisible ? 'animate' : ''}`}>explore fabric artisty</h2>}
       {/* 2. Scrollable Area: Moves independently of the title */}
