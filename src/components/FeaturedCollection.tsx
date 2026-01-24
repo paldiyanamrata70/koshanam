@@ -5,19 +5,18 @@ import customizeOutfitsImg from '../assets/images/customize-outfits.jpg';
 import customizeBlousesImg from '../assets/images/customize-blouses.jpg';
 import accessoriesImg from '../assets/images/accessories.jpg';
 import handEmbroideryImg from '../assets/images/hand-embroidery.JPG';
-
-const fabric1Img = '/pictures/fabric1.JPG';
-const fabric2Img = '/pictures/fabric2.JPG';
-const fabric3Img = '/pictures/fabric3.JPG';
-const fabric4Img = '/pictures/fabric4.JPG';
-const fabric5Img = '/pictures/fabric5.JPG';
-const fabric6Img = '/pictures/fabric6.JPG';
-const fabric7Img = '/pictures/fabric7.JPG';
-const fabric8Img = '/pictures/fabric8.JPG';
-const fabric9Img = '/pictures/fabric9.JPG';
-const fabric10Img = '/pictures/fabric10.JPG';
-const fabric11Img = '/pictures/fabric11.JPG';
-const fabric12Img = '/pictures/fabric12.JPG';
+import fabric1Img from '../assets/pictures/fabric1.jpg';
+import fabric2Img from '../assets/pictures/fabric2.jpg';
+import fabric3Img from '../assets/pictures/fabric3.jpg';
+import fabric4Img from '../assets/pictures/fabric4.jpg';
+import fabric5Img from '../assets/pictures/fabric5.jpg';
+import fabric6Img from '../assets/pictures/fabric6.jpg';
+import fabric7Img from '../assets/pictures/fabric7.jpg';
+import fabric8Img from '../assets/pictures/fabric8.jpg';
+import fabric9Img from '../assets/pictures/fabric9.jpg';
+import fabric10Img from '../assets/pictures/fabric10.jpg';
+import fabric11Img from '../assets/pictures/fabric11.jpg';
+import fabric12Img from '../assets/pictures/fabric12.jpg';
 
 // '/pictures/fabric1.JPG', '/pictures/fabric2.jpg','/pictures/fabric3.jpg',
 //      '/pictures/fabric5.jpg','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
