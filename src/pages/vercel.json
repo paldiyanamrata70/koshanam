@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "www.koshafabric.in" }
+      ],
+      "destination": "https://koshafabric.in/$1",
+      "permanent": true
+    }
+  ]
+}
