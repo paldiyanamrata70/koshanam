@@ -21,7 +21,7 @@ import fabric12Img from '../assets/pictures/fabric12.jpg';
 // '/pictures/fabric1.JPG', '/pictures/fabric2.jpg','/pictures/fabric3.jpg',
 //      '/pictures/fabric5.jpg','/pictures/fabric8.JPG' , '/pictures/fabric6.jpg',
 //     '/pictures/fabric7.jpg', '/pictures/fabric9.JPG','/pictures/fabric11.JPG',
-//      '/pictures/fabric10.jpg', '/pictures/fabric4.JPG','/pictures/fabric12.JPG',
+//      '/pictures/fabric10.jpg', '/pictures/fabric4.JPG','/pictures/fabric12.JPG', 
      
 const FeaturedCollection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,7 +44,7 @@ const FeaturedCollection = () => {
     },
     {
       image: sarresImg,
-      title: 'Sarres',
+      title: 'Sarees',
     },
     {
       image: customizeOutfitsImg,
