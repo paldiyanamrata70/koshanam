@@ -40,7 +40,7 @@ const ArtisanalExcellence = () => {
   }, []);
 
   return (
-    <section className="artisanal-section">
+    <section id="artisanal-excellence" className="artisanal-section">
       <h2 className="m-0">Artisanal Excellence</h2>
       <div className="carousel-wrapper">
         {artisans.map((item, index) => {

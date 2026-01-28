@@ -14,6 +14,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
     { label: 'Watch Finest', href: '#finest-film' },
     { label: 'Artisanal Excellence', href: '#artisanal-excellence' },
     { label: 'Faces Of Kosha', href: '#faces-of-kosha' },
+    { label: 'From Loom to Look', href: '#from-loom-to-look' },
     { label: 'Contact', href: '#footer' },
   ];
 

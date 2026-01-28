@@ -18,7 +18,7 @@ const FromLoomToLook = () => {
   }, []);
 
   return (
-    <section className="loom-section">
+    <section id="from-loom-to-look" className="loom-section">
       <h2 className="loom-title">From Loom to Look</h2>
 
       <div className="loom-slider-wrapper">
