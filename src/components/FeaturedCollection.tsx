@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import dressMaterialImg from '../assets/images/dress-material.jpg';
-import sarresImg from '../assets/images/sarres.JPG';
+import sareesImg from '../assets/images/sarees.jpg';
 import customizeOutfitsImg from '../assets/images/customize-outfits.jpg';
 import customizeBlousesImg from '../assets/images/customize-blouses.jpg';
 import accessoriesImg from '../assets/images/accessories.jpg';
@@ -43,7 +43,7 @@ const FeaturedCollection = () => {
       title: 'Dress Materials',
     },
     {
-      image: sarresImg,
+      image: sareesImg,
       title: 'Sarees',
     },
     {
