@@ -88,7 +88,6 @@ I admire your design aesthetic and would love updates on new launches, collectio
 
       <div className="footer-bottom font-thin" style={{fontStretch: 'condensed'}}>
         Copyright © 2026 © Kosha | Terms of Use | Privacy Policy | FAQs | Pricing Policy
-        <p className="text-center font-medium text-[15px] mt-1">By Synora Digitals</p>
       </div>
     </footer>
   );
